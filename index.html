@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amar Softic | Portfolio</title>
 
   <!-- Tailwind -->
@@ -11,25 +12,24 @@
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         crossorigin="anonymous" />
-
 </head>
 
 <body class="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 scroll-smooth">
 
 <!-- NAV -->
-<nav class="fixed top-0 left-0 right-0 z-50 bg-transparent flex justify-end gap-10 px-6 py-4">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/30 backdrop-blur-md flex justify-end gap-6 sm:gap-10 px-4 sm:px-6 py-4">
   <a href="#home" class="font-medium hover:underline cursor-pointer">Home</a>
   <a href="#projects" class="font-medium hover:underline cursor-pointer">Projects</a>
   <a href="#contact" class="font-medium hover:underline cursor-pointer">Contact</a>
 </nav>
 
 <!-- HOME -->
-<section id="home" class="min-h-screen flex px-16">
+<section id="home" class="min-h-screen flex flex-col md:flex-row px-4 sm:px-8 md:px-16 pt-24 md:pt-0">
 
   <!-- LEFT -->
-  <div class="w-full md:w-1/2 flex flex-col mt-20 md:mt-40">
+  <div class="w-full md:w-1/2 flex flex-col justify-center md:mt-40">
 
-    <h1 class="text-4xl font-mono text-gray-800 mb-6">
+    <h1 class="text-3xl sm:text-4xl font-mono text-gray-800 mb-6 leading-snug">
       &lt; Hi, Ich bin <span class="text-blue-500">Amar</span> Softic &gt;<br>
       &lt; Web <span class="text-white">Full</span> Stack<br>
       <span class="text-blue-500">Developer</span> / &gt;
@@ -41,67 +41,65 @@
     </p>
 
     <!-- BUTTONS -->
-    <div class="flex gap-4 mb-6">
+    <div class="flex flex-col sm:flex-row gap-4 mb-6 w-full sm:w-auto">
       <a href="#contact"
-         class="px-6 py-2 rounded-lg bg-green-600 text-white font-semibold hover:bg-green-700 transition">
+         class="text-center px-6 py-2 rounded-lg bg-green-600 text-white font-semibold hover:bg-green-700 transition">
         Stell mich ein
       </a>
 
       <a href="assets/documents/CV.pdf" download
-         class="px-6 py-2 rounded-lg bg-green-600 text-white font-semibold hover:bg-green-700 transition">
+         class="text-center px-6 py-2 rounded-lg bg-green-600 text-white font-semibold hover:bg-green-700 transition">
         Herunterladen CV
       </a>
     </div>
 
     <!-- SOCIAL -->
-    <div class="flex gap-6 text-2xl">
-      <a href="https://github.com/Amarsoftaaa" target="_blank">
+    <div class="flex gap-6 text-2xl mb-8">
+      <a href="https://github.com/Amarsoftaaa" target="_blank" aria-label="GitHub">
         <i class="fa-brands fa-github"></i>
       </a>
-      <a href="https://linkedin.com/in/amar-softic-450353344" target="_blank">
+      <a href="https://linkedin.com/in/amar-softic-450353344" target="_blank" aria-label="LinkedIn">
         <i class="fa-brands fa-linkedin"></i>
       </a>
     </div>
 
     <!-- TECHNOLOGIES -->
-    
-    <h2 class="mt-10 mb-4 font-mono text-2xl">Technologien :</h2>
-    <div class="flex gap-6" >
-      <img src="assets/images/ht.png" class="w-12 h-12">
-      <img src="assets/images/cs.png" class="w-12 h-12">
-      <img src="assets/images/p.png" class="w-12 h-12">
-      <img src="assets/images/dja.png" class="w-12 h-12">
+    <h2 class="mt-2 mb-4 font-mono text-2xl">Technologien :</h2>
+    <div class="flex flex-wrap gap-6">
+      <img src="assets/images/ht.png" class="w-12 h-12" alt="HTML">
+      <img src="assets/images/cs.png" class="w-12 h-12" alt="CSS">
+      <img src="assets/images/p.png" class="w-12 h-12" alt="Python">
+      <img src="assets/images/dja.png" class="w-12 h-12" alt="Django">
     </div>
 
-    </div>
+  </div>
 
   <!-- RIGHT -->
   <div class="w-full md:w-1/2 flex justify-center md:justify-end items-center mt-10 md:mt-0">
-    <div class="w-[240px] h-[240px] sm:w-[320px] sm:h-[320px] md:w-[520px] md:h-[520px] rounded-full overflow-hidden ring-4 ring-white/70">
-      <img src="assets/images/port3.png "
+    <div class="w-[220px] h-[220px] sm:w-[300px] sm:h-[300px] md:w-[520px] md:h-[520px] rounded-full overflow-hidden ring-4 ring-white/70">
+      <img src="assets/images/port3.png"
            class="w-full h-full object-cover" alt="Amar Softic">
     </div>
   </div>
 
 </section>
 
-<section id="projects" class="min-h-screen px-16 py-20">
+<!-- PROJECTS -->
+<section id="projects" class="min-h-screen px-4 sm:px-8 md:px-16 py-20">
 
   <h2 class="text-4xl font-bold mb-12 text-gray-800">
     Projects
   </h2>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
 
-    <!-- PROJECT CARD -->
-    <div class="projects" class="min-h-screen px-6 py-12 md:px-16 md:py-20">
-        
+    <!-- PROJECT CARD 1 -->
+    <div class="bg-white/30 backdrop-blur-md rounded-2xl p-6 shadow-lg">
       <h3 class="text-xl font-semibold mb-4">
         Portfolio Website RentaCarSole
       </h3>
 
-      <!-- VIDEO -->
-      <div class="relative w-full max-w-sm aspect-video rounded-xl overflow-hidden mb-4">
+      <div class="relative w-full aspect-video rounded-xl overflow-hidden mb-4">
         <iframe
           class="absolute inset-0 w-full h-full"
           src="https://www.youtube.com/embed/VIDEO_ID"
@@ -122,14 +120,15 @@
           GitHub
         </a>
       </div>
-
     </div>
+
+    <!-- PROJECT CARD 2 -->
     <div class="bg-white/30 backdrop-blur-md rounded-2xl p-6 shadow-lg">
-        
       <h3 class="text-xl font-semibold mb-4">
         Portfolio Website TechMax
       </h3>
-      <div class="relative w-full max-w-sm aspect-video rounded-xl overflow-hidden mb-4">
+
+      <div class="relative w-full aspect-video rounded-xl overflow-hidden mb-4">
         <iframe
           class="absolute inset-0 w-full h-full"
           src="https://www.youtube.com/embed/VIDEO_ID"
@@ -139,6 +138,7 @@
           allowfullscreen>
         </iframe>
       </div>
+
       <p class="text-gray-700 mb-4">
         Kurze Demo .
       </p>
@@ -152,24 +152,19 @@
     </div>
 
   </div>
-
 </section>
 
-
 <!-- CONTACT -->
-<section id="contact" class="min-h-screen flex items-center px-16">
+<section id="contact" class="min-h-screen flex items-center px-4 sm:px-8 md:px-16 py-20">
   <div class="w-full max-w-2xl mx-auto">
     <h2 class="text-4xl font-bold mb-8 text-center">Kontakt</h2>
 
     <form class="flex flex-col gap-6">
-      <input type="text" placeholder="Name"
-             class="border p-3 rounded-lg">
+      <input type="text" placeholder="Name" class="border p-3 rounded-lg">
 
-      <input type="email" placeholder="Email"
-             class="border p-3 rounded-lg">
+      <input type="email" placeholder="Email" class="border p-3 rounded-lg">
 
-      <textarea rows="5" placeholder="Nachricht"
-                class="border p-3 rounded-lg"></textarea>
+      <textarea rows="5" placeholder="Nachricht" class="border p-3 rounded-lg"></textarea>
 
       <button class="bg-green-600 text-white py-3 rounded-lg hover:bg-green-700">
         Send Nachricht
