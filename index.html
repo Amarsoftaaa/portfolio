@@ -159,19 +159,48 @@
   <div class="w-full max-w-2xl mx-auto">
     <h2 class="text-4xl font-bold mb-8 text-center">Kontakt</h2>
 
-    <form class="flex flex-col gap-6">
-      <input type="text" placeholder="Name" class="border p-3 rounded-lg">
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      class="flex flex-col gap-6">
 
-      <input type="email" placeholder="Email" class="border p-3 rounded-lg">
+      <!-- BITNO za Netlify -->
+      <input type="hidden" name="form-name" value="contact">
 
-      <textarea rows="5" placeholder="Nachricht" class="border p-3 rounded-lg"></textarea>
+      <input
+        type="text"
+        name="name"
+        placeholder="Name"
+        required
+        class="border p-3 rounded-lg"
+      >
 
-      <button class="bg-green-600 text-white py-3 rounded-lg hover:bg-green-700">
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        required
+        class="border p-3 rounded-lg"
+      >
+
+      <textarea
+        name="message"
+        rows="5"
+        placeholder="Nachricht"
+        required
+        class="border p-3 rounded-lg"
+      ></textarea>
+
+      <button
+        type="submit"
+        class="bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition">
         Send Nachricht
       </button>
     </form>
   </div>
 </section>
+
 
 </body>
 </html>
