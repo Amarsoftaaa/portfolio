@@ -160,44 +160,19 @@
     <h2 class="text-4xl font-bold mb-8 text-center">Kontakt</h2>
 
     <form
-      name="contact"
-      method="POST"
-      data-netlify="true"
-      class="flex flex-col gap-6">
+  action="https://formspree.io/f/meelaeby"
+  method="POST"
+  class="max-w-xl mx-auto bg-white/30 backdrop-blur-md rounded-2xl p-6 shadow-lg flex flex-col gap-6"
+>
+  <input type="text" name="name" placeholder="Name" required class="border p-3 rounded-lg" />
+  <input type="email" name="email" placeholder="Email" required class="border p-3 rounded-lg" />
+  <textarea name="message" rows="5" placeholder="Nachricht" required class="border p-3 rounded-lg"></textarea>
 
-      <!-- BITNO za Netlify -->
-      <input type="hidden" name="form-name" value="contact">
+  <button type="submit" class="bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition">
+    Send Nachricht
+  </button>
+</form>
 
-      <input
-        type="text"
-        name="name"
-        placeholder="Name"
-        required
-        class="border p-3 rounded-lg"
-      >
-
-      <input
-        type="email"
-        name="email"
-        placeholder="Email"
-        required
-        class="border p-3 rounded-lg"
-      >
-
-      <textarea
-        name="message"
-        rows="5"
-        placeholder="Nachricht"
-        required
-        class="border p-3 rounded-lg"
-      ></textarea>
-
-      <button
-        type="submit"
-        class="bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition">
-        Send Nachricht
-      </button>
-    </form>
   </div>
 </section>
 
