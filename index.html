@@ -47,7 +47,7 @@
         Stell mich ein
       </a>
 
-      <a href="assets/documents/CVamar.pdf" download
+      <a href="assets/documents/CVl.pdf" download
          class="text-center px-6 py-2 rounded-lg bg-green-600 text-white font-semibold hover:bg-green-700 transition">
         Herunterladen CV
       </a>
@@ -154,28 +154,52 @@
   </div>
 </section>
 
-<form
-  name="contact"
-  method="POST"
-  data-netlify="true"
-  netlify-honeypot="bot-field"
-  class="flex flex-col gap-6"
->
-  <input type="hidden" name="form-name" value="contact" />
+<!-- CONTACT -->
+<section id="contact" class="min-h-screen flex items-center px-4 sm:px-8 md:px-16 py-20">
+  <div class="w-full max-w-2xl mx-auto">
+    <h2 class="text-4xl font-bold mb-8 text-center">Kontakt</h2>
 
-  <p class="hidden">
-    <label>Don’t fill this out <input name="bot-field" /></label>
-  </p>
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      class="flex flex-col gap-6">
 
-  <input type="text" name="name" placeholder="Name" required class="border p-3 rounded-lg" />
-  <input type="email" name="email" placeholder="Email" required class="border p-3 rounded-lg" />
-  <textarea name="message" rows="5" placeholder="Nachricht" required class="border p-3 rounded-lg"></textarea>
+      <!-- BITNO za Netlify -->
+      <input type="hidden" name="form-name" value="contact">
 
-  <button type="submit" class="bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition">
-    Send Nachricht
-  </button>
-</form>
+      <input
+        type="text"
+        name="name"
+        placeholder="Name"
+        required
+        class="border p-3 rounded-lg"
+      >
 
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        required
+        class="border p-3 rounded-lg"
+      >
+
+      <textarea
+        name="message"
+        rows="5"
+        placeholder="Nachricht"
+        required
+        class="border p-3 rounded-lg"
+      ></textarea>
+
+      <button
+        type="submit"
+        class="bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition">
+        Send Nachricht
+      </button>
+    </form>
+  </div>
+</section>
 
 </body>
 </html>
