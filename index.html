@@ -154,80 +154,28 @@
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="min-h-screen flex items-center px-4 sm:px-8 md:px-16 py-20">
-  <div class="w-full max-w-2xl mx-auto">
-    <h2 class="text-4xl font-bold mb-8 text-center">Kontakt</h2>
+<form
+  name="contact"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  class="flex flex-col gap-6"
+>
+  <input type="hidden" name="form-name" value="contact" />
 
-    <form id="contactForm" class="flex flex-col gap-6">
-      <input
-        type="text"
-        name="name"
-        placeholder="Name"
-        required
-        class="border p-3 rounded-lg"
-      >
+  <p class="hidden">
+    <label>Don’t fill this out <input name="bot-field" /></label>
+  </p>
 
-      <input
-        type="email"
-        name="email"
-        placeholder="Email"
-        required
-        class="border p-3 rounded-lg"
-      >
+  <input type="text" name="name" placeholder="Name" required class="border p-3 rounded-lg" />
+  <input type="email" name="email" placeholder="Email" required class="border p-3 rounded-lg" />
+  <textarea name="message" rows="5" placeholder="Nachricht" required class="border p-3 rounded-lg"></textarea>
 
-      <textarea
-        name="message"
-        rows="5"
-        placeholder="Nachricht"
-        required
-        class="border p-3 rounded-lg"
-      ></textarea>
+  <button type="submit" class="bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition">
+    Send Nachricht
+  </button>
+</form>
 
-      <button
-        type="submit"
-        class="bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition">
-        Send Nachricht
-      </button>
-
-      <p id="formStatus" class="text-center text-sm"></p>
-    </form>
-  </div>
-</section>
- 
-<script>
-const form = document.getElementById("contactForm");
-const statusEl = document.getElementById("formStatus");
-
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  statusEl.textContent = "Slanje...";
-
-  const payload = {
-    name: form.name.value.trim(),
-    email: form.email.value.trim(),
-    message: form.message.value.trim(),
-  };
-
-  try {
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
-
-    if (res.ok) {
-      statusEl.textContent = "✅ Poruka je poslana!";
-      form.reset();
-    } else {
-      const txt = await res.text().catch(() => "");
-      statusEl.textContent = "❌ Greška pri slanju. " + (txt ? "(provjeri API)" : "");
-    }
-  } catch (err) {
-    statusEl.textContent = "❌ Greška mreže.";
-  }
-});
-</script>
 
 </body>
 </html>
