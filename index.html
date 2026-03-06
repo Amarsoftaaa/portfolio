@@ -14,167 +14,304 @@
         crossorigin="anonymous" />
 </head>
 
-<body class="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 scroll-smooth">
+<body class="min-h-screen bg-[radial-gradient(circle_at_center,#6b0000_0%,#1a0000_40%,#0a0000_80%)] text-white scroll-smooth">
 
 <!-- NAV -->
-<nav class="fixed top-0 left-0 right-0 z-50 bg-white/30 backdrop-blur-md flex justify-end gap-6 sm:gap-10 px-4 sm:px-6 py-4">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-red/800 backdrop-blur-md flex justify-center gap-6 sm:gap-10 px-4 sm:px-6 py-4">
   <a href="#home" class="font-medium hover:underline cursor-pointer">Home</a>
   <a href="#projects" class="font-medium hover:underline cursor-pointer">Projects</a>
   <a href="#contact" class="font-medium hover:underline cursor-pointer">Contact</a>
 </nav>
 
 <!-- HOME -->
-<section id="home" class="min-h-screen flex flex-col md:flex-row px-4 sm:px-8 md:px-16 pt-24 md:pt-0">
+<section id="home" class="min-h-screen  text-white px-6 sm:px-10 md:px-16 py-20 flex items-center">
+  <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
 
-  <!-- LEFT -->
-  <div class="w-full md:w-1/2 flex flex-col justify-center md:mt-40">
+    <!-- LEFT -->
+    <div class="max-w-3xl">
+      
+      <div class="inline-block border border-red-500/40 rounded-full px-6 py-3 mb-8 bg-red-950/20">
+        <p class="text-red-400 uppercase tracking-[0.35em] text-sm font-semibold">
+          Welcome to my universe
+        </p>
+      </div>
 
-    <h1 class="text-3xl sm:text-4xl font-mono text-gray-800 mb-6 leading-snug">
-      &lt; Hi, Ich bin <span class="text-blue-500">Amar</span> Softic /><br> < Junior &gt;<br>
-      &lt; Web <span class="text-green-500">Full</span> Stack<br>
-      <span class="text-blue-500">Developer</span> / &gt;
-    </h1>
+      <h1 class="text-[52px] sm:text-[64px] md:text-[76px] lg:text-[88px] font-extrabold leading-[0.95] tracking-tight">
+        <span class="text-white">Crafting</span>
+        <span class="text-red-500"> Django</span>
+        <br />
+        <span class="bg-gradient-to-b from-red-500 to-red-900 bg-clip-text text-transparent">
+          Web Applications
+        </span>
+      </h1>
 
-    <p class="text-black max-w-md mb-6">
-      Ich bin Python Backend Developer mit guten Kenntnissen in HTML und CSS.
-      Ich entwickle Webanwendungen und lege Wert auf sauberen, strukturierten Code.
-    </p>
+      <p class="mt-8 max-w-xl text-xl md:text-xl leading-relaxed text-slate-300 font-medium">
+        I'm <span class="text-white font-bold">Amar Softic</span>,
+        a <span class="text-red-500 font-bold">Python & Django Developer</span>
+        dedicated to building clean, efficient and scalable web applications.
+      </p>
 
-    <!-- BUTTONS -->
-    <div class="flex flex-col sm:flex-row gap-4 mb-6 w-full sm:w-auto">
-      <a href="#contact"
-         class="text-center px-6 py-2 rounded-lg bg-green-600 text-white font-semibold hover:bg-green-700 transition">
-        Stell mich ein
-      </a>
+      <!-- BUTTONS -->
+      <div class="mt-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+        <a href="#contact"
+           class="text-center px-6 py-3 rounded-lg bg-red-900 text-white font-semibold hover:bg-red-700 transition">
+          Stell mich ein
+        </a>
 
-      <a href="assets/documents/CVamar.pdf" download
-         class="text-center px-6 py-2 rounded-lg bg-green-600 text-white font-semibold hover:bg-green-700 transition">
-        Herunterladen CV
-      </a>
+        <a href="assets/documents/CVamar.pdf" download
+           class="text-center px-6 py-3 rounded-lg bg-red-900 text-white font-semibold hover:bg-red-700 transition">
+          Herunterladen CV
+        </a>
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="flex gap-6 text-2xl mt-8 mb-8">
+        <a href="https://github.com/Amarsoftaaa" target="_blank" aria-label="GitHub" class="hover:text-red-400 transition">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/amar-softic-450353344" target="_blank" aria-label="LinkedIn" class="hover:text-red-400 transition">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </div>
+
     </div>
 
-    <!-- SOCIAL -->
-    <div class="flex gap-6 text-2xl mb-8">
-      <a href="https://github.com/Amarsoftaaa" target="_blank" aria-label="GitHub">
-        <i class="fa-brands fa-github"></i>
-      </a>
-      <a href="https://linkedin.com/in/amar-softic-450353344" target="_blank" aria-label="LinkedIn">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
-    </div>
-
-    <!-- TECHNOLOGIES -->
-    <h2 class="mt-2 mb-4 font-mono text-2xl">Technologien :</h2>
-    <div class="flex flex-wrap gap-6">
-      <img src="assets/images/ht.png" class="w-12 h-12" alt="HTML">
-      <img src="assets/images/cs.png" class="w-12 h-12" alt="CSS">
-      <img src="assets/images/p.png" class="w-12 h-12" alt="Python">
-      <img src="assets/images/dja.png" class="w-12 h-12" alt="Django">
-    </div>
+    <!-- RIGHT -->
+    <div class="w-full flex justify-center md:justify-end items-center md:-mt-20">
+    <div class="w-[220px] h-[220px] sm:w-[300px] sm:h-[300px] md:w-[420px] md:h-[420px] lg:w-[500px] lg:h-[500px] rounded-full overflow-hidden ">
+    
+    <img src="assets/images/port3.png"
+         class="w-full h-full object-cover"
+         alt="Amar Softic">
 
   </div>
+</div>
+  </div>
+</section>
 
-  <!-- RIGHT -->
-  <div class="w-full md:w-1/2 flex justify-center md:justify-end items-center mt-10 md:mt-0">
-    <div class="w-[220px] h-[220px] sm:w-[300px] sm:h-[300px] md:w-[520px] md:h-[520px] rounded-full overflow-hidden ring-4 ring-white/70">
-      <img src="assets/images/port3.png"
-           class="w-full h-full object-cover" alt="Amar Softic">
+<!-- Technologies -->
+<section class="w-full py-8 bg-gradient-to-r from-[#120000] via-[#220000] to-[#120000] border-y border-red-800/30">
+  <div class="max-w-7xl mx-auto px-6 sm:px-10 md:px-16">
+    <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16">
+      
+
+      <img src="assets/images/ht.png" class="w-12 h-12 hover:scale-110 transition duration-300" alt="HTML">
+      <img src="assets/images/cs.png" class="w-12 h-12 hover:scale-110 transition duration-300" alt="CSS">
+      <img src="assets/images/p.png" class="w-12 h-12 hover:scale-110 transition duration-300" alt="Python">
+      <img src="assets/images/dja.png" class="w-12 h-12 hover:scale-110 transition duration-300" alt="Django">
     </div>
   </div>
-
 </section>
 
 <!-- PROJECTS -->
 <section id="projects" class="min-h-screen px-4 sm:px-8 md:px-16 py-20">
 
-  <h2 class="text-4xl font-bold mb-12 text-gray-800">
-    Projects
-  </h2>
+  
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+  <div class="relative">
 
-    <!-- PROJECT CARD 1 -->
-    <div class="bg-white/30 backdrop-blur-md rounded-2xl p-6 shadow-lg">
-      <h3 class="text-xl font-semibold mb-4">
-        Portfolio Website RentaCarSole
-      </h3>
+    <!-- LEFT ARROW -->
+    <button id="leftBtn"
+      class="absolute -left-6 top-1/2 -translate-y-1/2 bg-red shadow-lg rounded-full p-3 z-10 hover:bg-black-100">
+      ←
+    </button>
 
-      <div class="relative w-full aspect-video rounded-xl overflow-hidden mb-4">
-  <iframe
-    class="absolute inset-0 w-full h-full"
-    src="https://www.youtube.com/embed/56DJ_sjJmDo"
-    title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen>
-  </iframe>
-</div>
+    <!-- PROJECTS CONTAINER -->
+    <div id="projectsContainer"
+      class="flex gap-8 overflow-x-auto scroll-smooth">
 
-      <p class="text-gray-700 mb-4">
-        Kurze Demo .
-      </p>
+      <!-- PROJECT CARD 1 -->
+      <div class="min-w-[500px] bg-white/30 backdrop-blur-md rounded-2xl p-6 shadow-lg">
 
-      <div class="flex gap-4">
-        <a href="https://github.com/Amarsoftaaa/matus" target="_blank"
-           class="text-blue-600 hover:underline">
-          GitHub
-        </a>
-      </div>
-    </div>
+        <h3 class="text-xl font-semibold mb-4">
+          Portfolio Website RentaCarSole
+        </h3>
+
+        <div class="relative w-full aspect-video rounded-xl overflow-hidden mb-4">
+          <iframe
+            class="absolute inset-0 w-full h-full"
+            src="https://www.youtube.com/embed/56DJ_sjJmDo"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
 
     
-    <div class="bg-white/30 backdrop-blur-md rounded-2xl p-6 shadow-lg">
-      <h3 class="text-xl font-semibold mb-4">
-        Portfolio Website Ambulant Pflegedienst
-      </h3>
 
-      <div class="relative w-full aspect-video rounded-xl overflow-hidden mb-4">
-        <iframe
-          class="absolute inset-0 w-full h-full"
-          src="https://www.youtube.com/embed/Vs8hqkxgK-8?si=lykJTvYuloP-9cJh"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+        <div class="flex gap-4">
+          <a href="https://github.com/Amarsoftaaa/matus" target="_blank" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
       </div>
 
-      <p class="text-gray-700 mb-4">
-        Kurze Demo .
-      </p>
 
-      <div class="flex gap-4">
-        <a href="https://github.com/Amarsoftaaa/yadecare-website" target="_blank"
-           class="text-blue-600 hover:underline">
-          GitHub
-        </a>
+      <!-- PROJECT CARD 2 -->
+      <div class="min-w-[500px] bg-white/30 backdrop-blur-md rounded-2xl p-6 shadow-lg">
+
+        <h3 class="text-xl font-semibold mb-4">
+          Portfolio Website Ambulant Pflegedienst
+        </h3>
+
+        <div class="relative w-full aspect-video rounded-xl overflow-hidden mb-4">
+          <iframe
+            class="absolute inset-0 w-full h-full"
+            src="https://www.youtube.com/embed/Vs8hqkxgK-8"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        
+
+        <div class="flex gap-4">
+          <a href="https://github.com/Amarsoftaaa" target="_blank" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
       </div>
+
     </div>
 
+    <!-- RIGHT ARROW -->
+    <button id="rightBtn"
+      class="absolute -right-6 top-1/2 -translate-y-1/2 bg-red shadow-lg rounded-full p-3 z-10 hover:bg-black-100">
+      →
+    </button>
+
   </div>
+
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="min-h-screen flex items-center px-4 sm:px-8 md:px-16 py-20">
-  <div class="w-full max-w-2xl mx-auto">
-    <h2 class="text-4xl font-bold mb-8 text-center">Kontakt</h2>
+<section id="contact" class="min-h-screen  text-white px-6 sm:px-12 md:px-20 py-24 flex items-center">
 
-    <form
-  action="https://formspree.io/f/meelaeby"
-  method="POST"
-  class="max-w-xl mx-auto bg-white/30 backdrop-blur-md rounded-2xl p-6 shadow-lg flex flex-col gap-6"
+<div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-20">
+
+<!-- LEFT SIDE -->
+<div class="flex flex-col justify-center">
+
+<p class="text-sm tracking-widest text-gray-400 mb-6">
+04 / START A PROJECT
+</p>
+
+<h2 class="text-5xl md:text-6xl font-semibold">
+LET'S TALK
+</h2>
+
+</div>
+
+
+<!-- RIGHT SIDE -->
+<form
+action="https://formspree.io/f/meelaeby"
+method="POST"
+class="flex flex-col gap-10"
 >
-  <input type="text" name="name" placeholder="Name" required class="border p-3 rounded-lg" />
-  <input type="email" name="email" placeholder="Email" required class="border p-3 rounded-lg" />
-  <textarea name="message" rows="5" placeholder="Nachricht" required class="border p-3 rounded-lg"></textarea>
 
-  <button type="submit" class="bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition">
-    Send Nachricht
-  </button>
+<input
+type="text"
+name="name"
+placeholder="Your Name"
+required
+class="w-full bg-transparent text-xl border-b border-gray-700 pb-4 focus:outline-none focus:border-white transition"
+/>
+
+<input
+type="email"
+name="email"
+placeholder="Your Email"
+required
+class="w-full bg-transparent text-xl border-b border-gray-700 pb-4 focus:outline-none focus:border-white transition"
+/>
+
+<textarea
+name="message"
+rows="4"
+placeholder="Tell me about your project"
+required
+class="w-full bg-transparent text-xl border-b border-gray-700 pb-4 focus:outline-none focus:border-white transition resize-none"
+></textarea>
+
+<button
+type="submit"
+class="mt-4 bg-zinc-200 text-black px-8 py-5 text-lg font-semibold uppercase flex items-center justify-between hover:bg-white transition"
+>
+
+<span>Send Message</span>
+<span class="text-2xl">→</span>
+
+</button>
+
 </form>
 
-  </div>
+</div>
+
 </section>
 
+<!-- FOOTER -->
+<footer class="bg-black text-white px-6 sm:px-10 md:px-16 py-16">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+    
+    <div>
+      <h3 class="text-2xl font-bold mb-4">Amar Softic<span class="text-green-400">.</span></h3>
+      <p class="text-slate-300 leading-7">
+        Ich entwickle moderne Webprojekte mit Fokus auf klares Design, Funktionalität und gute Benutzererfahrung.
+      </p>
+      <p class="text-slate-300 mt-4">
+        Vielen Dank für Ihren Besuch in meinem Portfolio.
+      </p>
+    </div>
+
+    <div>
+      <h4 class="text-xl font-semibold mb-4">Quick Links</h4>
+      <ul class="space-y-3 text-slate-300">
+        <li><a href="#home" class="hover:text-green-400 transition">Home</a></li>
+        
+        <li><a href="#projects" class="hover:text-green-400 transition">Projects</a></li>
+        <li><a href="#contact" class="hover:text-green-400 transition">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="text-xl font-semibold mb-4">Get in Touch</h4>
+      <div class="space-y-3 text-slate-300">
+        <p>amar.softic.ets@gmail.com</p>
+        <p>München, Deutschland</p>
+      </div>
+    </div>
+
+    <div>
+      <h4 class="text-xl font-semibold mb-4">Connect</h4>
+      <div class="flex gap-4">
+        <a href="https://github.com/Amarsoftaaa" target="_blank" aria-label="GitHub" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-green-500 transition">
+          G
+        </a>
+        <a href="https://linkedin.com/in/amar-softic-450353344" target="_blank" aria-label="LinkedIn" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-green-500 transition">
+          in
+        </a>
+        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-green-500 transition">
+          X
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="border-t border-slate-700 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-400 text-sm">
+    <p>© 2026 Amar Softic. All rights reserved.</p>
+    <div class="flex gap-6">
+      <a href="#" class="hover:text-green-400 transition">Privacy Policy</a>
+      <a href="#" class="hover:text-green-400 transition">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="assets/js/script.js"></script>
 </body>
 </html>
