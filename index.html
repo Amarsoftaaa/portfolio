@@ -7,6 +7,7 @@
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
 
   <!-- Font Awesome -->
   <link rel="stylesheet"
@@ -17,18 +18,18 @@
 <body class="min-h-screen bg-[radial-gradient(circle_at_center,#6b0000_0%,#1a0000_40%,#0a0000_80%)] text-white scroll-smooth">
 
 <!-- NAV -->
-<nav class="fixed top-0 left-0 right-0 z-50 bg-red/800 backdrop-blur-md flex justify-center gap-6 sm:gap-10 px-4 sm:px-6 py-4">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-red/800 backdrop-blur-md flex justify-center gap-6 sm:gap-10 px-4 sm:px-6 py-4 reveal">
   <a href="#home" class="font-medium hover:underline cursor-pointer">Home</a>
   <a href="#projects" class="font-medium hover:underline cursor-pointer">Projects</a>
   <a href="#contact" class="font-medium hover:underline cursor-pointer">Contact</a>
 </nav>
 
 <!-- HOME -->
-<section id="home" class="min-h-screen  text-white px-6 sm:px-10 md:px-16 py-20 flex items-center">
+<section id="home" class="min-h-screen  text-white px-6 sm:px-10 md:px-16 py-20 flex items-center reveal ">
   <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
 
     <!-- LEFT -->
-    <div class="max-w-3xl">
+    <div class="max-w-3xl reveal">
       
       <div class="inline-block border border-red-500/40 rounded-full px-6 py-3 mb-8 bg-red-950/20">
         <p class="text-red-400 uppercase tracking-[0.35em] text-sm font-semibold">
@@ -52,7 +53,7 @@
       </p>
 
       <!-- BUTTONS -->
-      <div class="mt-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+      <div class="mt-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto reveal">
         <a href="#contact"
            class="text-center px-6 py-3 rounded-lg bg-red-900 text-white font-semibold hover:bg-red-700 transition">
           Stell mich ein
@@ -65,7 +66,7 @@
       </div>
 
       <!-- SOCIAL -->
-      <div class="flex gap-6 text-2xl mt-8 mb-8">
+      <div class="flex gap-6 text-2xl mt-8 mb-8 reveal">
         <a href="https://github.com/Amarsoftaaa" target="_blank" aria-label="GitHub" class="hover:text-red-400 transition">
           <i class="fa-brands fa-github"></i>
         </a>
@@ -77,20 +78,18 @@
     </div>
 
     <!-- RIGHT -->
-    <div class="w-full flex justify-center md:justify-end items-center md:-mt-20">
-    <div class="w-[220px] h-[220px] sm:w-[300px] sm:h-[300px] md:w-[420px] md:h-[420px] lg:w-[500px] lg:h-[500px] rounded-full overflow-hidden ">
-    
-    <img src="assets/images/port3.png"
-         class="w-full h-full object-cover"
-         alt="Amar Softic">
-
-  </div>
+    <div class="w-full flex justify-center md:justify-end items-center md:-mt-20 reveal">
+    <div class="w-[220px] h-[220px] sm:w-[300px] sm:h-[300px] md:w-[420px] md:h-[420px]
+     lg:w-[500px] lg:h-[500px] rounded-full overflow-hidden float-image">
+  <img src="assets/images/port3.png" class="w-full h-full object-cover" alt="Amar Softic">
+</div>
+</div>
 </div>
   </div>
 </section>
 
 <!-- Technologies -->
-<section class="w-full py-8 bg-gradient-to-r from-[#120000] via-[#220000] to-[#120000] border-y border-red-800/30">
+<section class="w-full py-8 bg-gradient-to-r from-[#120000] via-[#220000] to-[#120000] border-y border-red-800/30 reveal">
   <div class="max-w-7xl mx-auto px-6 sm:px-10 md:px-16">
     <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16">
       
@@ -104,7 +103,7 @@
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="min-h-screen px-4 sm:px-8 md:px-16 py-20">
+<section id="projects" class="min-h-screen px-4 sm:px-8 md:px-16 reveal  py-20">
 
   
 
@@ -117,17 +116,17 @@
     </button>
 
     <!-- PROJECTS CONTAINER -->
-    <div id="projectsContainer"
+    <div id="projectsContainer reveal"
       class="flex gap-8 overflow-x-auto scroll-smooth">
 
       <!-- PROJECT CARD 1 -->
-      <div class="min-w-[500px] bg-white/30 backdrop-blur-md rounded-2xl p-6 shadow-lg">
+      <div class="min-w-[500px] bg-white/30 backdrop-blur-md rounded-2xl p-6 shadow-lg reveal">
 
         <h3 class="text-xl font-semibold mb-4">
           Portfolio Website RentaCarSole
         </h3>
 
-        <div class="relative w-full aspect-video rounded-xl overflow-hidden mb-4">
+        <div class="relative w-full aspect-video rounded-xl overflow-hidden mb-4 reveal">
           <iframe
             class="absolute inset-0 w-full h-full"
             src="https://www.youtube.com/embed/56DJ_sjJmDo"
@@ -140,7 +139,7 @@
 
     
 
-        <div class="flex gap-4">
+        <div class="flex gap-4 reveal">
           <a href="https://github.com/Amarsoftaaa/matus" target="_blank" aria-label="GitHub">
             <i class="fa-brands fa-github"></i>
           </a>
@@ -149,13 +148,13 @@
 
 
       <!-- PROJECT CARD 2 -->
-      <div class="min-w-[500px] bg-white/30 backdrop-blur-md rounded-2xl p-6 shadow-lg">
+      <div class="min-w-[500px] bg-white/30 backdrop-blur-md rounded-2xl p-6 shadow-lg reveal">
 
         <h3 class="text-xl font-semibold mb-4">
           Portfolio Website Ambulant Pflegedienst
         </h3>
 
-        <div class="relative w-full aspect-video rounded-xl overflow-hidden mb-4">
+        <div class="relative w-full aspect-video rounded-xl overflow-hidden mb-4 reveal">
           <iframe
             class="absolute inset-0 w-full h-full"
             src="https://www.youtube.com/embed/Vs8hqkxgK-8"
@@ -188,12 +187,12 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="min-h-screen  text-white px-6 sm:px-12 md:px-20 py-24 flex items-center">
+<section id="contact" class="min-h-screen  text-white px-6 sm:px-12 md:px-20 py-24 flex items-center reveal ">
 
-<div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-20">
+<div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-20 reveal">
 
 <!-- LEFT SIDE -->
-<div class="flex flex-col justify-center">
+<div class="flex flex-col justify-center reveal">
 
 <p class="text-sm tracking-widest text-gray-400 mb-6">
 04 / START A PROJECT
@@ -255,7 +254,7 @@ class="mt-4 bg-zinc-200 text-black px-8 py-5 text-lg font-semibold uppercase fle
 
 <!-- FOOTER -->
 <footer class="bg-black text-white px-6 sm:px-10 md:px-16 py-16">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 reveal">
     
     <div>
       <h3 class="text-2xl font-bold mb-4">Amar Softic<span class="text-green-400">.</span></h3>
@@ -300,7 +299,7 @@ class="mt-4 bg-zinc-200 text-black px-8 py-5 text-lg font-semibold uppercase fle
 
   </div>
 
-  <div class="border-t border-slate-700 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-400 text-sm">
+  <div class="border-t border-slate-700 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-400 text-sm reveal">
     <p>© 2026 Amar Softic. All rights reserved.</p>
     <div class="flex gap-6">
       <a href="#" class="hover:text-green-400 transition">Privacy Policy</a>
