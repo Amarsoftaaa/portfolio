@@ -38,19 +38,24 @@ flex gap-8 text-white font-medium">
     <!-- LEFT -->
     <div class="max-w-3xl reveal">
       
-      <div class="inline-block border border-red-500/40 rounded-full px-6 py-3 mb-8 bg-red-950/20">
-        <p class="text-red-400 uppercase tracking-[0.35em] text-sm font-semibold">
-          Welcome to my universe
-        </p>
-      </div>
+      
 
-      <h1 class="text-[52px] sm:text-[64px] md:text-[76px] lg:text-[88px] font-extrabold leading-[0.95] tracking-tight">
+      <h1 class="text-[48px] sm:text-[60px] md:text-[72px] lg:text-[84px] font-extrabold leading-[0.95] tracking-tight">
+  
         <span class="text-white">Crafting</span>
-        <span class="text-red-500"> Django</span>
-        <br />
-        <span class="bg-gradient-to-b from-red-500 to-red-900 bg-clip-text text-transparent">
-          Web Applications
+  
+        <br>
+
+        <span class="text-red-500">Django</span>
+  
+        <span class="text-white">Web</span>
+
+        <br>
+
+        <span class="bg-gradient-to-b from-red-400 to-red-700 bg-clip-text text-transparent">
+          Applications
         </span>
+
       </h1>
 
       <p class="mt-8 max-w-3xl text-xl md:text-2xl leading-relaxed text-slate-300 font-medium">
@@ -89,9 +94,18 @@ flex gap-8 text-white font-medium">
 
     <!-- RIGHT -->
     <div class="w-full flex justify-center md:justify-end items-center md:-mt-20 reveal">
-    <div class="w-[220px] h-[220px] sm:w-[300px] sm:h-[300px] md:w-[420px] md:h-[420px]
-     lg:w-[500px] lg:h-[500px] rounded-full overflow-hidden float-image">
-  <img src="assets/images/port3.png" class="w-full h-full object-cover" alt="Amar Softic">
+    <div class="relative w-[220px] h-[220px] sm:w-[300px] sm:h-[300px] md:w-[420px] md:h-[420px] lg:w-[500px] lg:h-[500px]">
+
+  <!-- glow pozadina -->
+  <div class="absolute -inset-6 bg-red-500/30 blur-3xl rounded-full scale-110"></div>
+
+  <!-- slika -->
+  <div class="relative w-full h-full rounded-full overflow-hidden border border-white/20 shadow-2xl float-image">
+    <img src="assets/images/port3.png"
+         class="w-full h-full object-cover"
+         alt="Amar Softic">
+  </div>
+
 </div>
 </div>
 </div>
@@ -117,7 +131,7 @@ flex gap-8 text-white font-medium">
 
   
 
-  <div class="relative">
+  <div class="relative overflow-visible py-4">
 
     <!-- LEFT ARROW -->
     <button id="leftBtn"
@@ -126,11 +140,11 @@ flex gap-8 text-white font-medium">
     </button>
 
     <!-- PROJECTS CONTAINER -->
-    <div id="projectsContainer reveal"
-      class="flex gap-8 overflow-x-auto scroll-smooth">
+    <div id="projectsContainer"
+  class="flex gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory pt-4">
 
       <!-- PROJECT CARD 1 -->
-      <div class="min-w-[500px] bg-white/30 backdrop-blur-md rounded-2xl p-6 shadow-lg reveal">
+      <div class="min-w-[420px] snap-center bg-white/10 border border-white/20 backdrop-blur-xl rounded-2xl p-6 shadow-lg reveal transition duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-white/40">
 
         <h3 class="text-xl font-semibold mb-4">
           Portfolio Website RentaCarSole
@@ -158,10 +172,10 @@ flex gap-8 text-white font-medium">
 
 
       <!-- PROJECT CARD 2 -->
-      <div class="min-w-[500px] bg-white/30 backdrop-blur-md rounded-2xl p-6 shadow-lg reveal">
+      <div class="min-w-[420px] snap-center bg-white/10 border border-white/20 backdrop-blur-xl rounded-2xl p-6 shadow-lg reveal transition duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-white/40">
 
         <h3 class="text-xl font-semibold mb-4">
-          Portfolio Website Ambulant Pflegedienst
+          Website Ambulant Pflegedienst
         </h3>
 
         <div class="relative w-full aspect-video rounded-xl overflow-hidden mb-4 reveal">
@@ -179,6 +193,33 @@ flex gap-8 text-white font-medium">
 
         <div class="flex gap-4">
           <a href="https://github.com/Amarsoftaaa" target="_blank" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- PROJECT CARD 3 -->
+      <div class="min-w-[420px] snap-center bg-white/10 border border-white/20 backdrop-blur-xl rounded-2xl p-6 shadow-lg reveal transition duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-white/40">
+
+        <h3 class="text-xl font-semibold mb-4">
+          Website JobBoard
+        </h3>
+
+        <div class="relative w-full aspect-video rounded-xl overflow-hidden mb-4 reveal">
+          <iframe
+            class="absolute inset-0 w-full h-full"
+            src="https://www.youtube.com/embed/FVukLvKOBm0?si=eeflKN_YYTUUnbxi"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+    
+
+        <div class="flex gap-4 reveal">
+          <a href="https://github.com/Amarsoftaaa/boardjob" target="_blank" aria-label="GitHub">
             <i class="fa-brands fa-github"></i>
           </a>
         </div>

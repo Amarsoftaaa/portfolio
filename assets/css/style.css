@@ -26,3 +26,40 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+.typing-cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.typing-text-fade {
+  animation: textFade 0.2s ease;
+}
+
+@keyframes textFade {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#projectsContainer::-webkit-scrollbar {
+  display: none;
+}
+
+#projectsContainer {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
