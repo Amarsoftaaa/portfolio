@@ -27,6 +27,7 @@ flex gap-8 text-white font-medium">
 
   <a href="#home" class="hover:text-red-400 transition">Home</a>
   <a href="#projects" class="hover:text-red-400 transition">Projects</a>
+  <a href="#reviews" class="hover:text-red-400 transition">Reviews</a>
   <a href="#contact" class="hover:text-red-400 transition">Contact</a>
 
 </nav>
@@ -127,114 +128,215 @@ flex gap-8 text-white font-medium">
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="min-h-screen px-4 sm:px-8 md:px-16 reveal  py-20">
+<section id="projects" class="min-h-screen px-4 sm:px-8 md:px-16 py-20 reveal">
 
-  
+  <div class="max-w-7xl mx-auto">
 
-  <div class="relative overflow-visible py-4">
+    <!-- Section Header -->
+    <div class="mb-16 reveal">
+      <p class="text-sm tracking-widest text-red-400/60 mb-3 uppercase">02 / My Work</p>
+      <h2 class="text-5xl md:text-6xl font-bold tracking-tight">Projects</h2>
+    </div>
 
-    <!-- LEFT ARROW -->
-    <button id="leftBtn"
-      class="absolute -left-6 top-1/2 -translate-y-1/2 bg-red shadow-lg rounded-full p-3 z-10 hover:bg-black-100">
-      ←
-    </button>
+    <div class="relative overflow-visible py-4">
 
-    <!-- PROJECTS CONTAINER -->
-    <div id="projectsContainer"
-  class="flex gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory pt-4">
+      <!-- LEFT ARROW -->
+      <button id="leftBtn"
+        class="absolute -left-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-red-900/50 border border-red-500/30 text-white flex items-center justify-center hover:bg-red-700/70 transition backdrop-blur-sm">
+        ←
+      </button>
 
-      <!-- PROJECT CARD 1 -->
-      <div class="min-w-[420px] snap-center bg-white/10 border border-white/20 backdrop-blur-xl rounded-2xl p-6 shadow-lg reveal transition duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-white/40">
+      <!-- PROJECTS CONTAINER -->
+      <div id="projectsContainer"
+        class="flex gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4">
 
-        <h3 class="text-xl font-semibold mb-4">
-          Portfolio Website RentaCarSole
-        </h3>
-
-        <div class="relative w-full aspect-video rounded-xl overflow-hidden mb-4 reveal">
-          <iframe
-            class="absolute inset-0 w-full h-full"
-            src="https://www.youtube.com/embed/56DJ_sjJmDo"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
+        <!-- PROJECT CARD 1 -->
+        <div class="glow-card min-w-[420px] snap-center p-6 rounded-2xl flex flex-col gap-5 reveal" data-glow>
+          <div data-glow></div>
+          <div class="relative z-10 flex flex-col gap-5">
+            <div>
+              <span class="text-xs text-red-400/70 tracking-widest uppercase">Web Application</span>
+              <h3 class="text-xl font-semibold mt-2">Portfolio Website RentaCarSole</h3>
+            </div>
+            <div class="relative w-full aspect-video rounded-xl overflow-hidden">
+              <iframe
+                class="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/56DJ_sjJmDo"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex gap-2 flex-wrap">
+                <span class="px-2 py-1 bg-red-900/40 border border-red-500/20 text-red-300 text-xs rounded-md">Django</span>
+                <span class="px-2 py-1 bg-red-900/40 border border-red-500/20 text-red-300 text-xs rounded-md">Python</span>
+                <span class="px-2 py-1 bg-red-900/40 border border-red-500/20 text-red-300 text-xs rounded-md">HTML/CSS</span>
+              </div>
+              <a href="https://github.com/Amarsoftaaa/matus" target="_blank" aria-label="GitHub"
+                class="text-xl hover:text-red-400 transition">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
         </div>
 
-    
+        <!-- PROJECT CARD 2 -->
+        <div class="glow-card min-w-[420px] snap-center p-6 rounded-2xl flex flex-col gap-5 reveal" data-glow>
+          <div data-glow></div>
+          <div class="relative z-10 flex flex-col gap-5">
+            <div>
+              <span class="text-xs text-red-400/70 tracking-widest uppercase">Web Application</span>
+              <h3 class="text-xl font-semibold mt-2">Website Ambulant Pflegedienst</h3>
+            </div>
+            <div class="relative w-full aspect-video rounded-xl overflow-hidden">
+              <iframe
+                class="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/Vs8hqkxgK-8"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex gap-2 flex-wrap">
+                <span class="px-2 py-1 bg-red-900/40 border border-red-500/20 text-red-300 text-xs rounded-md">Django</span>
+                <span class="px-2 py-1 bg-red-900/40 border border-red-500/20 text-red-300 text-xs rounded-md">Python</span>
+                <span class="px-2 py-1 bg-red-900/40 border border-red-500/20 text-red-300 text-xs rounded-md">HTML/CSS</span>
+              </div>
+              <a href="https://github.com/Amarsoftaaa" target="_blank" aria-label="GitHub"
+                class="text-xl hover:text-red-400 transition">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
 
-        <div class="flex gap-4 reveal">
-          <a href="https://github.com/Amarsoftaaa/matus" target="_blank" aria-label="GitHub">
-            <i class="fa-brands fa-github"></i>
-          </a>
+        <!-- PROJECT CARD 3 -->
+        <div class="glow-card min-w-[420px] snap-center p-6 rounded-2xl flex flex-col gap-5 reveal" data-glow>
+          <div data-glow></div>
+          <div class="relative z-10 flex flex-col gap-5">
+            <div>
+              <span class="text-xs text-red-400/70 tracking-widest uppercase">Web Application</span>
+              <h3 class="text-xl font-semibold mt-2">Website JobBoard</h3>
+            </div>
+            <div class="relative w-full aspect-video rounded-xl overflow-hidden">
+              <iframe
+                class="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/FVukLvKOBm0?si=eeflKN_YYTUUnbxi"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex gap-2 flex-wrap">
+                <span class="px-2 py-1 bg-red-900/40 border border-red-500/20 text-red-300 text-xs rounded-md">Django</span>
+                <span class="px-2 py-1 bg-red-900/40 border border-red-500/20 text-red-300 text-xs rounded-md">Python</span>
+                <span class="px-2 py-1 bg-red-900/40 border border-red-500/20 text-red-300 text-xs rounded-md">HTML/CSS</span>
+              </div>
+              <a href="https://github.com/Amarsoftaaa/boardjob" target="_blank" aria-label="GitHub"
+                class="text-xl hover:text-red-400 transition">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT ARROW -->
+      <button id="rightBtn"
+        class="absolute -right-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-red-900/50 border border-red-500/30 text-white flex items-center justify-center hover:bg-red-700/70 transition backdrop-blur-sm">
+        →
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="px-4 sm:px-8 md:px-16 py-20 reveal">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Section Header -->
+    <div class="mb-16 reveal">
+      <p class="text-sm tracking-widest text-red-400/60 mb-3 uppercase">03 / Reviews</p>
+      <h2 class="text-5xl md:text-6xl font-bold tracking-tight">What Clients Say</h2>
+    </div>
+
+    <!-- Testimonial widget -->
+    <div class="w-full max-w-2xl py-8">
+
+      <div class="flex items-start gap-6 md:gap-8">
+
+        <!-- Large index number -->
+        <span id="testimonialIndex"
+          class="text-[100px] md:text-[120px] font-light leading-none text-white/10 select-none shrink-0"
+          style="font-feature-settings:'tnum'">
+          01
+        </span>
+
+        <div class="flex-1 pt-4 md:pt-6">
+
+          <!-- Quote -->
+          <blockquote id="testimonialQuote"
+            class="text-xl md:text-3xl font-light leading-relaxed text-white tracking-tight">
+          </blockquote>
+
+          <!-- Author -->
+          <div id="testimonialAuthor" class="mt-10 group cursor-default">
+            <div class="flex items-center gap-4">
+              <div class="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-white/10 group-hover:ring-red-500/40 transition-all duration-300 shrink-0">
+                <img id="testimonialAvatar" src="" alt=""
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+              </div>
+              <div>
+                <p id="testimonialName" class="font-medium text-white"></p>
+                <p class="text-sm text-slate-400">
+                  <span id="testimonialRole"></span>
+                  <span class="mx-2 text-white/20">/</span>
+                  <span id="testimonialCompany" class="group-hover:text-red-300 transition-colors duration-300"></span>
+                </p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
-
-      <!-- PROJECT CARD 2 -->
-      <div class="min-w-[420px] snap-center bg-white/10 border border-white/20 backdrop-blur-xl rounded-2xl p-6 shadow-lg reveal transition duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-white/40">
-
-        <h3 class="text-xl font-semibold mb-4">
-          Website Ambulant Pflegedienst
-        </h3>
-
-        <div class="relative w-full aspect-video rounded-xl overflow-hidden mb-4 reveal">
-          <iframe
-            class="absolute inset-0 w-full h-full"
-            src="https://www.youtube.com/embed/Vs8hqkxgK-8"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
+      <!-- Navigation -->
+      <div class="mt-16 flex items-center justify-between">
+        <div class="flex items-center gap-6">
+          <div class="flex items-center gap-3" id="testimonialDots"></div>
+          <span class="text-xs text-slate-400 tracking-widest uppercase" id="testimonialCounter"></span>
         </div>
 
-        
-
-        <div class="flex gap-4">
-          <a href="https://github.com/Amarsoftaaa" target="_blank" aria-label="GitHub">
-            <i class="fa-brands fa-github"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- PROJECT CARD 3 -->
-      <div class="min-w-[420px] snap-center bg-white/10 border border-white/20 backdrop-blur-xl rounded-2xl p-6 shadow-lg reveal transition duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-white/40">
-
-        <h3 class="text-xl font-semibold mb-4">
-          Website JobBoard
-        </h3>
-
-        <div class="relative w-full aspect-video rounded-xl overflow-hidden mb-4 reveal">
-          <iframe
-            class="absolute inset-0 w-full h-full"
-            src="https://www.youtube.com/embed/FVukLvKOBm0?si=eeflKN_YYTUUnbxi"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-        </div>
-
-    
-
-        <div class="flex gap-4 reveal">
-          <a href="https://github.com/Amarsoftaaa/boardjob" target="_blank" aria-label="GitHub">
-            <i class="fa-brands fa-github"></i>
-          </a>
+        <div class="flex items-center gap-1">
+          <button id="testimonialPrev"
+            class="p-2 rounded-full text-white/40 hover:text-white hover:bg-white/5 transition-all duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button id="testimonialNext"
+            class="p-2 rounded-full text-white/40 hover:text-white hover:bg-white/5 transition-all duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
         </div>
       </div>
 
     </div>
-
-    <!-- RIGHT ARROW -->
-    <button id="rightBtn"
-      class="absolute -right-6 top-1/2 -translate-y-1/2 bg-red shadow-lg rounded-full p-3 z-10 hover:bg-black-100">
-      →
-    </button>
-
   </div>
-
 </section>
 
 <!-- CONTACT -->
@@ -308,7 +410,7 @@ class="mt-4 bg-zinc-200 text-black px-8 py-5 text-lg font-semibold uppercase fle
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 reveal">
     
     <div>
-      <h3 class="text-2xl font-bold mb-4">Amar Softic<span class="text-green-400">.</span></h3>
+      <h3 class="text-2xl font-bold mb-4">Amar Softic<span class="text-red-400">.</span></h3>
       <p class="text-slate-300 leading-7">
         Ich entwickle moderne Webprojekte mit Fokus auf klares Design, Funktionalität und gute Benutzererfahrung.
       </p>
@@ -320,10 +422,10 @@ class="mt-4 bg-zinc-200 text-black px-8 py-5 text-lg font-semibold uppercase fle
     <div>
       <h4 class="text-xl font-semibold mb-4">Quick Links</h4>
       <ul class="space-y-3 text-slate-300">
-        <li><a href="#home" class="hover:text-green-400 transition">Home</a></li>
+        <li><a href="#home" class="hover:text-red-400 transition">Home</a></li>
         
-        <li><a href="#projects" class="hover:text-green-400 transition">Projects</a></li>
-        <li><a href="#contact" class="hover:text-green-400 transition">Contact</a></li>
+        <li><a href="#projects" class="hover:text-red-400 transition">Projects</a></li>
+        <li><a href="#contact" class="hover:text-red-400 transition">Contact</a></li>
       </ul>
     </div>
 
@@ -338,10 +440,10 @@ class="mt-4 bg-zinc-200 text-black px-8 py-5 text-lg font-semibold uppercase fle
     <div>
       <h4 class="text-xl font-semibold mb-4">Connect</h4>
       <div class="flex gap-4">
-        <a href="https://github.com/Amarsoftaaa" target="_blank" aria-label="GitHub" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-green-500 transition">
+        <a href="https://github.com/Amarsoftaaa" target="_blank" aria-label="GitHub" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-red-600 transition">
           G
         </a>
-        <a href="https://linkedin.com/in/amar-softic-450353344" target="_blank" aria-label="LinkedIn" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-green-500 transition">
+        <a href="https://linkedin.com/in/amar-softic-450353344" target="_blank" aria-label="LinkedIn" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-red-600 transition">
           in
         </a>
         
@@ -353,8 +455,8 @@ class="mt-4 bg-zinc-200 text-black px-8 py-5 text-lg font-semibold uppercase fle
   <div class="border-t border-slate-700 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-400 text-sm reveal">
     <p>© 2026 Amar Softic. All rights reserved.</p>
     <div class="flex gap-6">
-      <a href="#" class="hover:text-green-400 transition">Privacy Policy</a>
-      <a href="#" class="hover:text-green-400 transition">Terms of Service</a>
+      <a href="#" class="hover:text-red-400 transition">Privacy Policy</a>
+      <a href="#" class="hover:text-red-400 transition">Terms of Service</a>
     </div>
   </div>
 </footer>
