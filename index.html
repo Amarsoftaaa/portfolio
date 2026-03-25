@@ -88,15 +88,78 @@ flex gap-8 text-white font-medium">
 </section>
 
 <!-- Technologies -->
-<section class="w-full py-8 bg-gradient-to-r from-[#120000] via-[#220000] to-[#120000] border-y border-red-800/30 reveal">
-  <div class="max-w-7xl mx-auto px-6 sm:px-10 md:px-16">
-    <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16">
-      
+<section class="w-full py-6 bg-gradient-to-r from-[#120000] via-[#220000] to-[#120000] border-y border-red-800/30 overflow-hidden">
+  <!-- fade edges -->
+  <div class="relative">
+    <div class="pointer-events-none absolute inset-y-0 left-0 w-24 z-10 bg-gradient-to-r from-[#120000] to-transparent"></div>
+    <div class="pointer-events-none absolute inset-y-0 right-0 w-24 z-10 bg-gradient-to-l from-[#120000] to-transparent"></div>
 
-      <img src="assets/images/ht.png" class="w-12 h-12 hover:scale-110 transition duration-300" alt="HTML">
-      <img src="assets/images/cs.png" class="w-12 h-12 hover:scale-110 transition duration-300" alt="CSS">
-      <img src="assets/images/p.png" class="w-12 h-12 hover:scale-110 transition duration-300" alt="Python">
-      <img src="assets/images/dja.png" class="w-12 h-12 hover:scale-110 transition duration-300" alt="Django">
+    <div class="marquee-track flex items-center gap-14">
+
+      <!-- SET 1 -->
+      <div class="flex items-center gap-3 shrink-0">
+        <img src="assets/images/ht.png" class="w-10 h-10" alt="HTML">
+        <span class="text-sm text-white/50 font-medium tracking-wide">HTML</span>
+      </div>
+      <div class="flex items-center gap-3 shrink-0">
+        <img src="assets/images/cs.png" class="w-10 h-10" alt="CSS">
+        <span class="text-sm text-white/50 font-medium tracking-wide">CSS</span>
+      </div>
+      <div class="flex items-center gap-3 shrink-0">
+        <img src="assets/images/p.png" class="w-10 h-10" alt="Python">
+        <span class="text-sm text-white/50 font-medium tracking-wide">Python</span>
+      </div>
+      <div class="flex items-center gap-3 shrink-0">
+        <img src="assets/images/dja.png" class="w-10 h-10" alt="Django">
+        <span class="text-sm text-white/50 font-medium tracking-wide">Django</span>
+      </div>
+      <div class="flex items-center gap-3 shrink-0">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-10 h-10" alt="JavaScript">
+        <span class="text-sm text-white/50 font-medium tracking-wide">JavaScript</span>
+      </div>
+      <div class="flex items-center gap-3 shrink-0">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-10 h-10" alt="React">
+        <span class="text-sm text-white/50 font-medium tracking-wide">React</span>
+      </div>
+      <div class="flex items-center gap-3 shrink-0">
+        <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" fill="rgba(255,255,255,0.65)"/>
+        </svg>
+        <span class="text-sm text-white/50 font-medium tracking-wide">Cloud</span>
+      </div>
+
+      <!-- SET 2 (duplicate for seamless loop) -->
+      <div class="flex items-center gap-3 shrink-0">
+        <img src="assets/images/ht.png" class="w-10 h-10" alt="HTML">
+        <span class="text-sm text-white/50 font-medium tracking-wide">HTML</span>
+      </div>
+      <div class="flex items-center gap-3 shrink-0">
+        <img src="assets/images/cs.png" class="w-10 h-10" alt="CSS">
+        <span class="text-sm text-white/50 font-medium tracking-wide">CSS</span>
+      </div>
+      <div class="flex items-center gap-3 shrink-0">
+        <img src="assets/images/p.png" class="w-10 h-10" alt="Python">
+        <span class="text-sm text-white/50 font-medium tracking-wide">Python</span>
+      </div>
+      <div class="flex items-center gap-3 shrink-0">
+        <img src="assets/images/dja.png" class="w-10 h-10" alt="Django">
+        <span class="text-sm text-white/50 font-medium tracking-wide">Django</span>
+      </div>
+      <div class="flex items-center gap-3 shrink-0">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-10 h-10" alt="JavaScript">
+        <span class="text-sm text-white/50 font-medium tracking-wide">JavaScript</span>
+      </div>
+      <div class="flex items-center gap-3 shrink-0">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-10 h-10" alt="React">
+        <span class="text-sm text-white/50 font-medium tracking-wide">React</span>
+      </div>
+      <div class="flex items-center gap-3 shrink-0">
+        <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" fill="rgba(255,255,255,0.65)"/>
+        </svg>
+        <span class="text-sm text-white/50 font-medium tracking-wide">Cloud</span>
+      </div>
+
     </div>
   </div>
 </section>
