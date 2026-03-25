@@ -109,6 +109,79 @@ if (testimonialPrev && testimonialNext) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  // ── WebGL Shader Hero ──
+  const glCanvas = document.getElementById("webglCanvas");
+  if (glCanvas && typeof THREE !== "undefined") {
+    const glScene    = new THREE.Scene();
+    const glCamera   = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, -1);
+    const glRenderer = new THREE.WebGLRenderer({ canvas: glCanvas, antialias: false });
+    glRenderer.setPixelRatio(window.devicePixelRatio);
+    glRenderer.setClearColor(new THREE.Color(0x000000));
+
+    const vertexShader = `
+      attribute vec3 position;
+      void main() {
+        gl_Position = vec4(position, 1.0);
+      }
+    `;
+
+    const fragmentShader = `
+      precision highp float;
+      uniform vec2 resolution;
+      uniform float time;
+      uniform float xScale;
+      uniform float yScale;
+      uniform float distortion;
+      void main() {
+        vec2 p = (gl_FragCoord.xy * 2.0 - resolution) / min(resolution.x, resolution.y);
+        float d = length(p) * distortion;
+        float rx = p.x * (1.0 + d);
+        float gx = p.x;
+        float bx = p.x * (1.0 - d);
+        float r = 0.05 / abs(p.y + sin((rx + time) * xScale) * yScale);
+        float g = 0.05 / abs(p.y + sin((gx + time) * xScale) * yScale);
+        float b = 0.05 / abs(p.y + sin((bx + time) * xScale) * yScale);
+        gl_FragColor = vec4(r, g, b, 1.0);
+      }
+    `;
+
+    const glUniforms = {
+      resolution: { value: [glCanvas.offsetWidth, glCanvas.offsetHeight] },
+      time:       { value: 0.0 },
+      xScale:     { value: 1.0 },
+      yScale:     { value: 0.5 },
+      distortion: { value: 0.05 },
+    };
+
+    const glGeometry = new THREE.BufferGeometry();
+    glGeometry.setAttribute("position", new THREE.BufferAttribute(
+      new Float32Array([-1,-1,0, 1,-1,0, -1,1,0, 1,-1,0, -1,1,0, 1,1,0]), 3
+    ));
+
+    glScene.add(new THREE.Mesh(
+      glGeometry,
+      new THREE.RawShaderMaterial({
+        vertexShader, fragmentShader, uniforms: glUniforms, side: THREE.DoubleSide
+      })
+    ));
+
+    function resizeGL() {
+      const w = glCanvas.parentElement.offsetWidth;
+      const h = glCanvas.parentElement.offsetHeight;
+      glRenderer.setSize(w, h, false);
+      glUniforms.resolution.value = [w, h];
+    }
+
+    function animateGL() {
+      glUniforms.time.value += 0.01;
+      glRenderer.render(glScene, glCamera);
+      requestAnimationFrame(animateGL);
+    }
+
+    resizeGL();
+    animateGL();
+    window.addEventListener("resize", resizeGL);
+  }
   const container = document.getElementById("projectsContainer");
   const rightBtn = document.getElementById("rightBtn");
   const leftBtn = document.getElementById("leftBtn");

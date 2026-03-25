@@ -9,6 +9,9 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/css/style.css">
 
+  <!-- Three.js -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+
   <!-- Font Awesome -->
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -33,84 +36,55 @@ flex gap-8 text-white font-medium">
 </nav>
 
 <!-- HOME -->
-<section id="home" class="min-h-screen  text-white px-6 sm:px-10 md:px-16 pt-28 pb-20 flex items-center reveal ">
-  <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
+<section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
 
-    <!-- LEFT -->
-    <div class="max-w-3xl reveal">
-      
-      
+  <!-- WebGL Canvas Background -->
+  <canvas id="webglCanvas" class="absolute inset-0 w-full h-full block"></canvas>
 
-      <h1 class="text-[48px] sm:text-[60px] md:text-[72px] lg:text-[84px] font-extrabold leading-[0.95] tracking-tight">
-  
-        <span class="text-white">Crafting</span>
-  
-        <br>
+  <!-- SVG Glass Filter (hidden) -->
+  <svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+    <defs>
+      <filter id="container-glass" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+        <feTurbulence type="fractalNoise" baseFrequency="0.05 0.05" numOctaves="1" seed="1" result="turbulence"/>
+        <feGaussianBlur in="turbulence" stdDeviation="2" result="blurredNoise"/>
+        <feDisplacementMap in="SourceGraphic" in2="blurredNoise" scale="70" xChannelSelector="R" yChannelSelector="B" result="displaced"/>
+        <feGaussianBlur in="displaced" stdDeviation="4" result="finalBlur"/>
+        <feComposite in="finalBlur" in2="finalBlur" operator="over"/>
+      </filter>
+    </defs>
+  </svg>
 
-        <span class="text-red-500">Django</span>
-  
-        <span class="text-white">Web</span>
+  <!-- Content -->
+  <div class="relative z-10 w-full flex flex-col items-center justify-center px-4 pt-20 pb-10">
+    <div class="border border-[#27272a] p-2 w-full mx-auto max-w-3xl">
+      <div class="border border-[#27272a] py-10 overflow-hidden">
 
-        <br>
+        <h1 class="mb-3 text-white text-center font-extrabold tracking-tighter text-[clamp(2.5rem,8vw,6rem)] leading-none">
+          Design is Everything
+        </h1>
 
-        <span class="bg-gradient-to-b from-red-400 to-red-700 bg-clip-text text-transparent">
-          Applications
-        </span>
+        <p class="text-white/60 px-6 text-center text-xs md:text-sm lg:text-lg mt-4">
+          Unleashing creativity through bold visuals, seamless interfaces, and limitless possibilities.
+        </p>
 
-      </h1>
+        <div class="my-8 flex items-center justify-center gap-2">
+          <span class="relative flex h-3 w-3 items-center justify-center">
+            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75"></span>
+            <span class="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
+          </span>
+          <p class="text-xs text-green-500">Available for New Projects</p>
+        </div>
 
-      <p class="mt-8 max-w-3xl text-xl md:text-2xl leading-relaxed text-slate-300 font-medium">
-        I'm <span class="text-white font-bold">Amar Softic</span>, a
-        <span class="text-red-500 font-bold">
-          <span id="typing-text"></span><span class="typing-cursor">|</span>
-        </span>
-        <br />
-        dedicated to building clean, efficient and scalable web applications.
-    </p>
+        <div class="flex justify-center">
+          <a href="#contact" class="liquid-btn text-white border border-white/20 rounded-full px-8 py-3 text-base font-medium">
+            Let's Go
+          </a>
+        </div>
 
-      <!-- BUTTONS -->
-      <div class="mt-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto reveal">
-        <a href="#contact"
-           class="text-center px-6 py-3 rounded-lg bg-red-900 text-white font-semibold hover:bg-red-700 transition">
-          Stell mich ein
-        </a>
-
-        <a href="assets/documents/CVamar.pdf" download
-           class="text-center px-6 py-3 rounded-lg bg-red-900 text-white font-semibold hover:bg-red-700 transition">
-          Herunterladen CV
-        </a>
       </div>
-
-      <!-- SOCIAL -->
-      <div class="flex gap-6 text-2xl mt-8 mb-8 reveal">
-        <a href="https://github.com/Amarsoftaaa" target="_blank" aria-label="GitHub" class="hover:text-red-400 transition">
-          <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://linkedin.com/in/amar-softic-450353344" target="_blank" aria-label="LinkedIn" class="hover:text-red-400 transition">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-      </div>
-
     </div>
-
-    <!-- RIGHT -->
-    <div class="w-full flex justify-center md:justify-end items-center md:-mt-20 reveal">
-    <div class="relative w-[220px] h-[220px] sm:w-[300px] sm:h-[300px] md:w-[420px] md:h-[420px] lg:w-[500px] lg:h-[500px]">
-
-  <!-- glow pozadina -->
-  <div class="absolute -inset-6 bg-red-500/30 blur-3xl rounded-full scale-110"></div>
-
-  <!-- slika -->
-  <div class="relative w-full h-full rounded-full overflow-hidden border border-white/20 shadow-2xl float-image">
-    <img src="assets/images/port3.png"
-         class="w-full h-full object-cover"
-         alt="Amar Softic">
   </div>
 
-</div>
-</div>
-</div>
-  </div>
 </section>
 
 <!-- Technologies -->
