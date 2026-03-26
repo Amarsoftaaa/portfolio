@@ -1,0 +1,518 @@
+/* ============================================================
+   GALLERY.CSS — All classes prefixed .gallery- to avoid conflicts
+   Compatible with existing dark red/black portfolio theme
+   ============================================================ */
+
+/* ── Divider between Projects and Gallery ───────────────────── */
+.gallery-section-divider {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(194, 50, 50, 0.25) 20%,
+    rgba(194, 50, 50, 0.5) 50%,
+    rgba(194, 50, 50, 0.25) 80%,
+    transparent
+  );
+  overflow: visible;
+}
+
+.gallery-section-divider::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 60px;
+  background: radial-gradient(ellipse at center, rgba(194, 50, 50, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ── Filter Buttons ─────────────────────────────────────────── */
+.gallery-filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.gallery-filter-btn {
+  padding: 0.45rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(194, 50, 50, 0.3);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color 0.25s, color 0.25s, background 0.25s, box-shadow 0.25s;
+  font-family: inherit;
+  line-height: 1;
+}
+
+.gallery-filter-btn:hover {
+  border-color: rgba(194, 50, 50, 0.55);
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(194, 50, 50, 0.07);
+}
+
+.gallery-filter-btn.gallery-filter-active {
+  background: #c23232;
+  border-color: #c23232;
+  color: #fff;
+  box-shadow: 0 0 18px rgba(194, 50, 50, 0.45);
+}
+
+/* ── Grid ───────────────────────────────────────────────────── */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+  min-height: 100px;
+}
+
+/* ── Card base ──────────────────────────────────────────────── */
+.gallery-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  cursor: pointer;
+
+  /* Entrance start state */
+  opacity: 0;
+  transform: translateY(28px);
+
+  /* Smooth tilt/hover reset */
+  transition: transform 0.45s cubic-bezier(0.23, 1, 0.32, 1),
+              box-shadow 0.45s ease,
+              border-color 0.3s ease;
+
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Entrance animation */
+@keyframes gallery-fade-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gallery-card.gallery-visible {
+  animation: gallery-fade-up 0.55s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.gallery-card:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  /* box-shadow set by JS tilt, falls back here when no tilt: */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.07);
+}
+
+/* ── Shine sweep overlay ────────────────────────────────────── */
+.gallery-card-shine {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 5;
+  background: linear-gradient(
+    115deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.11) 48%,
+    rgba(255, 255, 255, 0.06) 52%,
+    transparent 70%
+  );
+  transform: translateX(-110%);
+}
+
+@keyframes gallery-shine-sweep {
+  to { transform: translateX(110%); }
+}
+
+.gallery-card:hover .gallery-card-shine {
+  animation: gallery-shine-sweep 0.6s ease forwards;
+}
+
+/* ── Card Image area ────────────────────────────────────────── */
+.gallery-card-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.025);
+  flex-shrink: 0;
+}
+
+/* ── Individual slides (one per image) ─────────────────────── */
+.gallery-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+
+.gallery-slide.gallery-slide-active {
+  opacity: 1;
+}
+
+/* Hide slides whose image failed to load */
+.gallery-slide.gallery-slide-error {
+  display: none;
+}
+
+.gallery-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.55s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.gallery-card:hover .gallery-card-img {
+  transform: scale(1.06);
+}
+
+/* ── Inner image dots (shown when card has multiple images) ─── */
+.gallery-img-dots {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.gallery-img-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.35);
+  transition: width 0.3s ease, background 0.3s ease;
+  flex-shrink: 0;
+}
+
+.gallery-img-dot.gallery-img-dot-active {
+  width: 14px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.gallery-card-img-fallback {
+  display: none;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* ── Card body ──────────────────────────────────────────────── */
+.gallery-card-body {
+  padding: 1rem 1.1rem 1.15rem;
+  position: relative;
+  z-index: 2;
+}
+
+.gallery-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
+}
+
+.gallery-card-category {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(194, 50, 50, 0.85);
+}
+
+/* Corner arrow — hidden, slides in on hover */
+.gallery-card-arrow {
+  font-size: 0.95rem;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  transform: translate(-4px, 4px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.gallery-card:hover .gallery-card-arrow {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.gallery-card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 0.35rem;
+  line-height: 1.35;
+}
+
+/* Description — hidden, expands on hover */
+.gallery-card-desc {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.42);
+  line-height: 1.55;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease, margin 0.3s ease;
+}
+
+.gallery-card:hover .gallery-card-desc {
+  max-height: 90px;
+  opacity: 1;
+  margin-top: 0.1rem;
+}
+
+/* ── Dots navigation ────────────────────────────────────────── */
+.gallery-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2.5rem;
+  min-height: 20px;
+}
+
+.gallery-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255, 255, 255, 0.18);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s ease, width 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+}
+
+.gallery-dot:hover {
+  background: rgba(194, 50, 50, 0.5);
+}
+
+.gallery-dot.gallery-dot-active {
+  background: #c23232;
+  width: 24px;
+  box-shadow: 0 0 10px rgba(194, 50, 50, 0.55);
+}
+
+/* ── Lightbox ───────────────────────────────────────────────── */
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+
+  /* Backdrop */
+  background: rgba(5, 0, 0, 0.88);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  /* Entrance */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.gallery-lightbox.gallery-lb-open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Inner frame */
+.gallery-lb-frame {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  max-width: min(92vw, 1100px);
+  width: 100%;
+
+  transform: scale(0.94) translateY(16px);
+  transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.gallery-lightbox.gallery-lb-open .gallery-lb-frame {
+  transform: scale(1) translateY(0);
+}
+
+/* Image wrapper */
+.gallery-lb-img-wrap {
+  position: relative;
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  max-height: 76vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-lb-img {
+  display: block;
+  max-width: 100%;
+  max-height: 76vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  transition: opacity 0.25s ease;
+}
+
+.gallery-lb-img.gallery-lb-fading {
+  opacity: 0;
+}
+
+/* Prev / Next arrows */
+.gallery-lb-prev,
+.gallery-lb-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(10, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  padding: 0;
+}
+
+.gallery-lb-prev { left: 12px; }
+.gallery-lb-next { right: 12px; }
+
+.gallery-lb-prev:hover,
+.gallery-lb-next:hover {
+  background: #c23232;
+  border-color: #c23232;
+  transform: translateY(-50%) scale(1.08);
+}
+
+/* Hidden when only 1 image */
+.gallery-lb-prev.gallery-lb-hidden,
+.gallery-lb-next.gallery-lb-hidden {
+  display: none;
+}
+
+/* Bottom bar: title + counter + dots */
+.gallery-lb-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+}
+
+.gallery-lb-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gallery-lb-counter {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Inner image dots in lightbox */
+.gallery-lb-dots {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.gallery-lb-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+.gallery-lb-dot.gallery-lb-dot-active {
+  width: 18px;
+  background: #c23232;
+}
+
+/* Close button */
+.gallery-lb-close {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(10, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+  padding: 0;
+  z-index: 2;
+}
+
+.gallery-lb-close:hover {
+  background: #c23232;
+  color: #fff;
+  border-color: #c23232;
+}
+
+/* ── Responsive tweaks ──────────────────────────────────────── */
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-filter-btn {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.72rem;
+  }
+}

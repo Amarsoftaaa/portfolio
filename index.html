@@ -8,6 +8,7 @@
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/gallery.css">
 
   <!-- Three.js -->
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
@@ -30,6 +31,7 @@ flex gap-8 text-white font-medium">
 
   <a href="#home" class="hover:text-red-400 transition">Home</a>
   <a href="#projects" class="hover:text-red-400 transition">Projects</a>
+  <a href="#gallery" class="hover:text-red-400 transition">Gallery</a>
   <a href="#reviews" class="hover:text-red-400 transition">Reviews</a>
   <a href="#contact" class="hover:text-red-400 transition">Contact</a>
 
@@ -361,6 +363,38 @@ flex gap-8 text-white font-medium">
 
 </section>
 
+<!-- ─────────── GALLERY DIVIDER ─────────── -->
+<div class="gallery-section-divider"></div>
+
+<!-- GALLERY -->
+<section id="gallery" class="min-h-screen px-4 sm:px-8 md:px-16 py-20">
+
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Section Header -->
+    <div class="mb-12 reveal">
+      <p class="text-sm tracking-widest text-red-400/60 mb-3 uppercase">— / Gallery</p>
+      <h2 class="text-5xl md:text-6xl font-bold tracking-tight">Gallery</h2>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="gallery-filters" id="galleryFilters">
+      <button class="gallery-filter-btn gallery-filter-active" data-filter="all">All</button>
+      <button class="gallery-filter-btn" data-filter="web-app">Web App</button>
+      <button class="gallery-filter-btn" data-filter="design">Design</button>
+      <button class="gallery-filter-btn" data-filter="mobile">Mobile</button>
+    </div>
+
+    <!-- Gallery Grid — populated by gallery.js -->
+    <div class="gallery-grid" id="galleryGrid"></div>
+
+    <!-- Dots Navigation -->
+    <div class="gallery-dots" id="galleryDots"></div>
+
+  </div>
+
+</section>
+
 <!-- REVIEWS -->
 <section id="reviews" class="px-4 sm:px-8 md:px-16 py-20 reveal">
   <div class="max-w-7xl mx-auto">
@@ -564,5 +598,7 @@ class="mt-4 bg-zinc-200 text-black px-8 py-5 text-lg font-semibold uppercase fle
 
 
 <script src="assets/js/script.js"></script>
+<script src="assets/js/gallery-data.js"></script>
+<script src="assets/js/gallery.js"></script>
 </body>
 </html>
