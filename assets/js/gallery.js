@@ -168,6 +168,7 @@
         '</div>' +
         '<h3 class="gallery-card-title">' + escHTML(item.title) + '</h3>' +
         '<p class="gallery-card-desc">'   + escHTML(item.description) + '</p>' +
+        '<span class="gallery-card-cta">View Project &#8599;</span>' +
       '</div>' +
       '<div class="gallery-card-shine"></div>';
 
