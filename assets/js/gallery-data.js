@@ -28,6 +28,18 @@
 
 const GALLERY_DATA = [
   {
+    title: "Fast Food Website",
+    category: "web-app",
+    description: "Moderna web stranica za fast food restoran — meni, narudžbe i atraktivan dizajn.",
+    imagePaths: [
+      "./gallery/fastfood/1ee93a8a-daa8-4efa-b886-54f02cfd20b5.png",
+      "./gallery/fastfood/a3f1bafb-7a43-4267-887e-b7d30503bc96.png",
+      "./gallery/fastfood/a74de34a-da90-406a-8650-ce8a46543c3b.png",
+      "./gallery/fastfood/afd69832-2cfe-4549-b7fe-1a9ba425bdb9.png",
+      "./gallery/fastfood/eb584088-615d-4852-a08d-f4d2b600631e.png"
+    ]
+  },
+  {
     title: "Dental Clinic UI",
     category: "web-app",
     description: "Appointment booking interface with real-time availability, patient profiles, and confirmation emails.",
@@ -49,6 +61,16 @@ const GALLERY_DATA = [
       "./gallery/panorama/enhanced_2.jpg",
       "./gallery/panorama/enhanced_3.jpg",
       "./gallery/panorama/enhanced_4.jpg"
+    ]
+  },
+  {
+    title: "Reinigungs Unternehmen",
+    category: "web-app",
+    description: "Profesionalna web stranica za firmu za čišćenje — usluge, galerija i kontakt forma.",
+    imagePaths: [
+      "./gallery/reinigung/66427d8de43051c38c6b7ff3_cc-carpetcleanmodel22.png",
+      "./gallery/reinigung/7745bf1b-4491-40a3-8aef-ec9081a85ff9.png",
+      "./gallery/reinigung/f3560742-b859-4472-a8f1-642027f7a339.png"
     ]
   },
   {
