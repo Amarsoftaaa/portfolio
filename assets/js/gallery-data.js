@@ -64,6 +64,17 @@ const GALLERY_DATA = [
     ]
   },
   {
+    title: "Pancakes Restaurant",
+    category: "web-app",
+    description: "Moderna web stranica za restoran palačinki — meni, rezervacije i atraktivan dizajn.",
+    imagePaths: [
+      "./gallery/pancakes/3aa3a448-8a2a-41b1-975f-9740bf6efe0f.png",
+      "./gallery/pancakes/59de2990-cf84-4f08-897d-0c3da8bf79a3.png",
+      "./gallery/pancakes/73a79734-b2d7-4650-bf92-481441ffe8a6.png",
+      "./gallery/pancakes/e5e36224-11d8-440d-8a8e-5c2c63c524f3.png"
+    ]
+  },
+  {
     title: "Reinigungs Unternehmen",
     category: "web-app",
     description: "Profesionalna web stranica za firmu za čišćenje — usluge, galerija i kontakt forma.",

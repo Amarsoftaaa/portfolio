@@ -264,3 +264,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   runTypingEffect();
 });
+
+/* ── Clean URL navigation (no # in address bar) ─────────────── */
+document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+  anchor.addEventListener('click', function (e) {
+    var id = this.getAttribute('href').slice(1);
+    var target = document.getElementById(id);
+    if (!target) return;
+    e.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    history.replaceState(null, '', window.location.pathname);
+  });
+});

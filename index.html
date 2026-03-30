@@ -9,6 +9,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/gallery.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
 
   <!-- Three.js -->
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
@@ -32,7 +33,6 @@ flex gap-8 text-white font-medium">
   <a href="#home" class="hover:text-red-400 transition">Home</a>
   <a href="#projects" class="hover:text-red-400 transition">Projects</a>
   <a href="#gallery" class="hover:text-red-400 transition">Gallery</a>
-  <a href="#reviews" class="hover:text-red-400 transition">Reviews</a>
   <a href="#contact" class="hover:text-red-400 transition">Contact</a>
 
 </nav>
@@ -253,7 +253,39 @@ flex gap-8 text-white font-medium">
           </div>
         </div>
 
-        <!-- PROJECT CARD 1 -->
+        <!-- PROJECT CARD 2 -->
+        <div class="glow-card min-w-[420px] snap-center p-6 rounded-2xl flex flex-col gap-5 reveal" data-glow>
+          <div data-glow></div>
+          <div class="relative z-10 flex flex-col gap-5">
+            <div>
+              <span class="text-xs text-red-400/70 tracking-widest uppercase">Web Application</span>
+              <h3 class="text-xl font-semibold mt-2">Pancakes Restaurant</h3>
+            </div>
+            <div class="relative w-full aspect-video rounded-xl overflow-hidden">
+              <iframe
+                class="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/kemNiAyxvpM?si=2kbwtTzfkOqte9HD"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex gap-2 flex-wrap">
+                <span class="px-2 py-1 bg-red-900/40 border border-red-500/20 text-red-300 text-xs rounded-md">Django</span>
+                <span class="px-2 py-1 bg-red-900/40 border border-red-500/20 text-red-300 text-xs rounded-md">Python</span>
+                <span class="px-2 py-1 bg-red-900/40 border border-red-500/20 text-red-300 text-xs rounded-md">HTML/CSS</span>
+              </div>
+              <a href="https://github.com/Amarsoftaaa" target="_blank" aria-label="GitHub"
+                class="text-xl hover:text-red-400 transition">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD 3 -->
         <div class="glow-card min-w-[420px] snap-center p-6 rounded-2xl flex flex-col gap-5 reveal" data-glow>
           <div data-glow></div>
           <div class="relative z-10 flex flex-col gap-5">
@@ -573,59 +605,80 @@ class="mt-4 bg-zinc-200 text-black px-8 py-5 text-lg font-semibold uppercase fle
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-black text-white px-6 sm:px-10 md:px-16 py-16">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 reveal">
-    
-    <div>
-      <h3 class="text-2xl font-bold mb-4">Amar Softic<span class="text-red-400">.</span></h3>
-      <p class="text-slate-300 leading-7">
-        Ich entwickle moderne Webprojekte mit Fokus auf klares Design, Funktionalität und gute Benutzererfahrung.
-      </p>
-      <p class="text-slate-300 mt-4">
-        Vielen Dank für Ihren Besuch in meinem Portfolio.
-      </p>
-    </div>
+<footer class="pf-footer">
 
-    <div>
-      <h4 class="text-xl font-semibold mb-4">Quick Links</h4>
-      <ul class="space-y-3 text-slate-300">
-        <li><a href="#home" class="hover:text-red-400 transition">Home</a></li>
-        
-        <li><a href="#projects" class="hover:text-red-400 transition">Projects</a></li>
-        <li><a href="#contact" class="hover:text-red-400 transition">Contact</a></li>
+  <!-- Top bar -->
+  <div class="pf-footer-topbar">
+    <a href="#home" class="pf-footer-top-link">+ NACH OBEN</a>
+  </div>
+
+  <!-- Main grid -->
+  <div class="pf-footer-main">
+
+    <!-- Navigation -->
+    <div class="pf-footer-col">
+      <p class="pf-footer-label">NAVIGATION</p>
+      <ul class="pf-footer-links">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#projects">PROJEKTE</a></li>
+        <li><a href="#gallery">GALERIE</a></li>
+        <li><a href="#reviews">REVIEWS</a></li>
+        <li><a href="#contact">KONTAKT</a></li>
       </ul>
     </div>
 
-    <div>
-      <h4 class="text-xl font-semibold mb-4">Get in Touch</h4>
-      <div class="space-y-3 text-slate-300">
-        <p>amar.softic.ets@gmail.com</p>
-        <p>München, Deutschland</p>
+    <!-- Legal -->
+    <div class="pf-footer-col">
+      <p class="pf-footer-label">RECHTLICHES</p>
+      <ul class="pf-footer-links">
+        <li><a href="#">DATENSCHUTZ</a></li>
+        <li><a href="#">AGB</a></li>
+        <li><a href="#">IMPRESSUM</a></li>
+      </ul>
+    </div>
+
+    <!-- Center: Newsletter + rotating logo -->
+    <div class="pf-footer-center">
+      <p class="pf-footer-label">NEWSLETTER ABONNIEREN</p>
+      <div class="pf-footer-newsletter">
+        <input type="email" placeholder="E-MAIL ADRESSE" class="pf-footer-input" />
+        <button type="button" class="pf-footer-send">SENDEN</button>
+      </div>
+
+      <!-- Circular rotating logo -->
+      <div class="pf-footer-logo-wrap">
+        <svg class="pf-footer-logo-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <path id="pf-circle-path"
+              d="M 100,100 m -72,0 a 72,72 0 1,1 144,0 a 72,72 0 1,1 -144,0"/>
+          </defs>
+          <text class="pf-footer-logo-text">
+            <textPath href="#pf-circle-path" startOffset="0%">
+              AMAR SOFTIC • WEB DEVELOPER • MÜNCHEN •
+            </textPath>
+          </text>
+        </svg>
+        <div class="pf-footer-logo-dot"></div>
       </div>
     </div>
 
-    <div>
-      <h4 class="text-xl font-semibold mb-4">Connect</h4>
-      <div class="flex gap-4">
-        <a href="https://github.com/Amarsoftaaa" target="_blank" aria-label="GitHub" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-red-600 transition">
-          G
-        </a>
-        <a href="https://linkedin.com/in/amar-softic-450353344" target="_blank" aria-label="LinkedIn" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-red-600 transition">
-          in
-        </a>
-        
-      </div>
+    <!-- Social -->
+    <div class="pf-footer-col pf-footer-col-right">
+      <p class="pf-footer-label">FOLGEN</p>
+      <ul class="pf-footer-links">
+        <li><a href="https://github.com/Amarsoftaaa" target="_blank">GITHUB</a></li>
+        <li><a href="https://linkedin.com/in/amar-softic-450353344" target="_blank">LINKEDIN</a></li>
+      </ul>
     </div>
 
   </div>
 
-  <div class="border-t border-slate-700 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-400 text-sm reveal">
-    <p>© 2026 Amar Softic. All rights reserved.</p>
-    <div class="flex gap-6">
-      <a href="#" class="hover:text-red-400 transition">Privacy Policy</a>
-      <a href="#" class="hover:text-red-400 transition">Terms of Service</a>
-    </div>
+  <!-- Bottom bar -->
+  <div class="pf-footer-bottom">
+    <p>© 2026 Amar Softic. Alle Rechte vorbehalten.</p>
+    <p>• AMAR SOFTIC</p>
   </div>
+
 </footer>
 
 
