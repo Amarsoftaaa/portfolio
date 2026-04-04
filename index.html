@@ -14,26 +14,38 @@
   <!-- Three.js -->
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <!-- Font Awesome -->
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         crossorigin="anonymous" />
 </head>
 
-<body class="min-h-screen bg-[radial-gradient(circle_at_center,#6b0000_0%,#1a0000_40%,#0a0000_80%)] text-white scroll-smooth">
+<body class="min-h-screen bg-[radial-gradient(circle_at_center,#6b0000_0%,#1a0000_40%,#0a0000_80%)] text-white scroll-smooth" style="font-family:'Space Grotesk',sans-serif">
 
 <!-- NAV -->
-<nav class="fixed top-6 left-1/2 -translate-x-1/2  z-[9999]
-bg-red-950/40 backdrop-blur-md 
-border border-red-500/40 
-rounded-full 
-px-8 py-3 
-flex gap-8 text-white font-medium">
+<nav class="fixed top-5 left-1/2 -translate-x-1/2 z-[9999] flex items-center gap-1 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full px-2 py-2">
 
-  <a href="#home" class="hover:text-red-400 transition">Home</a>
-  <a href="#projects" class="hover:text-red-400 transition">Projects</a>
-  <a href="#gallery" class="hover:text-red-400 transition">Gallery</a>
-  <a href="#contact" class="hover:text-red-400 transition">Contact</a>
+  <a href="#home"
+    class="relative px-5 py-1.5 text-sm font-medium text-white/70 rounded-full hover:text-white hover:bg-white/10 transition-all duration-200 tracking-wide">
+    Home
+  </a>
+  <a href="#projects"
+    class="relative px-5 py-1.5 text-sm font-medium text-white/70 rounded-full hover:text-white hover:bg-white/10 transition-all duration-200 tracking-wide">
+    Projects
+  </a>
+  <a href="#gallery"
+    class="relative px-5 py-1.5 text-sm font-medium text-white/70 rounded-full hover:text-white hover:bg-white/10 transition-all duration-200 tracking-wide">
+    Gallery
+  </a>
+  <a href="#contact"
+    class="ml-1 px-5 py-1.5 text-sm font-semibold text-white bg-red-600/80 hover:bg-red-500 rounded-full transition-all duration-200 tracking-wide">
+    Contact
+  </a>
 
 </nav>
 
@@ -58,8 +70,8 @@ flex gap-8 text-white font-medium">
 
   <!-- Content -->
   <div class="relative z-10 w-full flex flex-col items-center justify-center px-4 pt-20 pb-10">
-    <div class="border border-[#27272a] p-2 w-full mx-auto max-w-3xl">
-      <div class="border border-[#27272a] py-10 overflow-hidden">
+    <div class="w-full mx-auto max-w-3xl">
+      <div class="py-10 overflow-hidden">
 
         <h1 class="mb-3 text-white text-center font-extrabold tracking-tighter text-[clamp(2.5rem,8vw,6rem)] leading-none">
           Design is Everything
@@ -164,6 +176,121 @@ flex gap-8 text-white font-medium">
 
     </div>
   </div>
+</section>
+
+<!-- WEB DESIGN SECTION -->
+<section class="relative px-4 sm:px-8 md:px-16 py-32 overflow-hidden">
+
+  <!-- background glow -->
+  <div class="pointer-events-none absolute -top-40 right-0 w-[600px] h-[500px] rounded-full bg-red-900/10 blur-[130px]"></div>
+
+  <div class="max-w-7xl mx-auto">
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+      <!-- LEFT — IMAGE -->
+      <div class="reveal relative order-2 lg:order-1">
+        <div class="absolute -top-4 -left-4 w-12 h-12 border-t border-l border-red-500/40"></div>
+        <div class="absolute -bottom-4 -right-4 w-12 h-12 border-b border-r border-red-500/40"></div>
+        <div class="absolute inset-0 scale-105 bg-red-700/10 blur-2xl"></div>
+        <img
+          src="gallery/newsec.webp"
+          alt="Web Design"
+          class="relative w-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out"
+        />
+      </div>
+
+      <!-- RIGHT — TEXT -->
+      <div class="reveal order-1 lg:order-2">
+
+        <p class="text-xs tracking-[0.3em] text-red-400/60 uppercase mb-5">Web Development</p>
+
+        <h2 class="text-5xl md:text-6xl xl:text-7xl font-black leading-[0.92] tracking-tighter text-white mb-8">
+          Websites<br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600">that convert.</span><br>
+          Built to last.
+        </h2>
+
+        <p class="text-white/50 text-base md:text-lg leading-relaxed max-w-md mb-10">
+          From landing pages to full-stack web apps — we design and build fast, modern websites that look stunning and perform even better.
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+          <div class="px-5 py-2.5 bg-white/5 border border-white/10 text-sm text-white/70 tracking-wide">UI / UX Design</div>
+          <div class="px-5 py-2.5 bg-white/5 border border-white/10 text-sm text-white/70 tracking-wide">Frontend Dev</div>
+          <div class="px-5 py-2.5 bg-white/5 border border-white/10 text-sm text-white/70 tracking-wide">Full-Stack</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FLYER & LOGO DESIGN -->
+<section id="flyer" class="relative px-4 sm:px-8 md:px-16 py-32 overflow-hidden">
+
+  <!-- background glow blob -->
+  <div class="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[500px] rounded-full bg-red-800/10 blur-[120px]"></div>
+
+  <div class="max-w-7xl mx-auto">
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+      <!-- LEFT — TEXT -->
+      <div class="reveal">
+
+        <p class="text-xs tracking-[0.3em] text-red-400/60 uppercase mb-5">Visual Identity</p>
+
+        <h2 class="text-5xl md:text-6xl xl:text-7xl font-black leading-[0.92] tracking-tighter text-white mb-8">
+          Logos.<br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600">Flyers.</span><br>
+          Branding.
+        </h2>
+
+        <p class="text-white/50 text-base md:text-lg leading-relaxed max-w-md mb-10">
+          Every brand starts with a single image. We create visual identities that leave a mark — from minimal logos to bold promo flyers that stop the scroll.
+        </p>
+
+        <!-- stat pills -->
+        <div class="flex flex-wrap gap-4">
+          <div class="px-5 py-2.5 bg-white/5 border border-white/10 text-sm text-white/70 tracking-wide">
+            Logo Design
+          </div>
+          <div class="px-5 py-2.5 bg-white/5 border border-white/10 text-sm text-white/70 tracking-wide">
+            Flyer & Poster
+          </div>
+          <div class="px-5 py-2.5 bg-white/5 border border-white/10 text-sm text-white/70 tracking-wide">
+            Brand Identity
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT — IMAGE -->
+      <div class="reveal relative">
+
+        <!-- decorative corner lines -->
+        <div class="absolute -top-4 -left-4 w-12 h-12 border-t border-l border-red-500/40"></div>
+        <div class="absolute -bottom-4 -right-4 w-12 h-12 border-b border-r border-red-500/40"></div>
+
+        <!-- glow behind image -->
+        <div class="absolute inset-0 scale-105 rounded-sm bg-red-700/10 blur-2xl"></div>
+
+        <img
+          src="gallery/fly.png"
+          alt="Flyer & Logo Design"
+          class="relative w-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out"
+        />
+
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 
 <!-- PROJECTS -->
