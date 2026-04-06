@@ -1,3 +1,65 @@
+// ── Navbar Scroll Adaptation ──
+(function () {
+  const nav    = document.getElementById('mainNav');
+  const hero   = document.getElementById('home');
+  if (!nav || !hero) return;
+
+  function update() {
+    const heroBottom = hero.offsetTop + window.innerHeight;
+    if (window.scrollY > heroBottom - 80) {
+      nav.classList.add('nav-scrolled');
+    } else {
+      nav.classList.remove('nav-scrolled');
+    }
+  }
+
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+
+// ── Hero Scroll-Driven Image Switch ──
+(function () {
+  const section    = document.getElementById('home');
+  const slides     = document.querySelectorAll('.hero-slide');
+  const indicators = document.querySelectorAll('.hero-indicator');
+  if (!section || !slides.length) return;
+
+  let current = 0;
+
+  function goTo(index) {
+    if (index === current) return;
+    slides[current].classList.remove('hero-slide-active');
+    indicators[current]?.classList.remove('hero-indicator-active');
+    current = index;
+    slides[current].classList.add('hero-slide-active');
+    indicators[current]?.classList.add('hero-indicator-active');
+  }
+
+  // Manual indicator clicks
+  indicators.forEach((btn, i) => {
+    btn.addEventListener('click', () => goTo(i));
+  });
+
+  // Scroll listener — progress through section drives the image index
+  window.addEventListener('scroll', () => {
+    const scrollTop      = window.scrollY;
+    const sectionTop     = section.offsetTop;
+    const sectionHeight  = section.offsetHeight;   // 300vh
+    const scrollable     = sectionHeight - window.innerHeight;
+
+    const raw      = (scrollTop - sectionTop) / scrollable;
+    const progress = Math.max(0, Math.min(1, raw));
+
+    // Divide progress into equal thirds per slide
+    const index = Math.min(
+      Math.floor(progress * slides.length),
+      slides.length - 1
+    );
+
+    goTo(index);
+  }, { passive: true });
+})();
+
 // Spotlight glow — track pointer across all glow cards
 document.addEventListener('pointermove', (e) => {
   const { clientX: x, clientY: y } = e;
@@ -47,8 +109,8 @@ function renderTestimonialDots() {
     const line = document.createElement("span");
     line.className = "block h-px transition-all duration-500 ease-out " + (
       i === activeTestimonial
-        ? "w-12 bg-white"
-        : "w-6 bg-white/20 group-hover:w-8 group-hover:bg-white/40"
+        ? "w-12 bg-gray-900"
+        : "w-6 bg-gray-300 group-hover:w-8 group-hover:bg-gray-500"
     );
     btn.appendChild(line);
     btn.addEventListener("click", () => changeTestimonial(i));
@@ -109,79 +171,6 @@ if (testimonialPrev && testimonialNext) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // ── WebGL Shader Hero ──
-  const glCanvas = document.getElementById("webglCanvas");
-  if (glCanvas && typeof THREE !== "undefined") {
-    const glScene    = new THREE.Scene();
-    const glCamera   = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, -1);
-    const glRenderer = new THREE.WebGLRenderer({ canvas: glCanvas, antialias: false });
-    glRenderer.setPixelRatio(window.devicePixelRatio);
-    glRenderer.setClearColor(new THREE.Color(0x000000));
-
-    const vertexShader = `
-      attribute vec3 position;
-      void main() {
-        gl_Position = vec4(position, 1.0);
-      }
-    `;
-
-    const fragmentShader = `
-      precision highp float;
-      uniform vec2 resolution;
-      uniform float time;
-      uniform float xScale;
-      uniform float yScale;
-      uniform float distortion;
-      void main() {
-        vec2 p = (gl_FragCoord.xy * 2.0 - resolution) / min(resolution.x, resolution.y);
-        float d = length(p) * distortion;
-        float rx = p.x * (1.0 + d);
-        float gx = p.x;
-        float bx = p.x * (1.0 - d);
-        float r = 0.05 / abs(p.y + sin((rx + time) * xScale) * yScale);
-        float g = 0.05 / abs(p.y + sin((gx + time) * xScale) * yScale);
-        float b = 0.05 / abs(p.y + sin((bx + time) * xScale) * yScale);
-        gl_FragColor = vec4(r, g, b, 1.0);
-      }
-    `;
-
-    const glUniforms = {
-      resolution: { value: [glCanvas.offsetWidth, glCanvas.offsetHeight] },
-      time:       { value: 0.0 },
-      xScale:     { value: 1.0 },
-      yScale:     { value: 0.5 },
-      distortion: { value: 0.05 },
-    };
-
-    const glGeometry = new THREE.BufferGeometry();
-    glGeometry.setAttribute("position", new THREE.BufferAttribute(
-      new Float32Array([-1,-1,0, 1,-1,0, -1,1,0, 1,-1,0, -1,1,0, 1,1,0]), 3
-    ));
-
-    glScene.add(new THREE.Mesh(
-      glGeometry,
-      new THREE.RawShaderMaterial({
-        vertexShader, fragmentShader, uniforms: glUniforms, side: THREE.DoubleSide
-      })
-    ));
-
-    function resizeGL() {
-      const w = glCanvas.parentElement.offsetWidth;
-      const h = glCanvas.parentElement.offsetHeight;
-      glRenderer.setSize(w, h, false);
-      glUniforms.resolution.value = [w, h];
-    }
-
-    function animateGL() {
-      glUniforms.time.value += 0.01;
-      glRenderer.render(glScene, glCamera);
-      requestAnimationFrame(animateGL);
-    }
-
-    resizeGL();
-    animateGL();
-    window.addEventListener("resize", resizeGL);
-  }
   const container = document.getElementById("projectsContainer");
   const rightBtn = document.getElementById("rightBtn");
   const leftBtn = document.getElementById("leftBtn");
