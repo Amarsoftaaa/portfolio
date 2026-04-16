@@ -74,23 +74,23 @@ document.addEventListener('pointermove', (e) => {
 // ── Testimonials ──
 const testimonials = [
   {
-    quote: "The attention to detail and creative vision transformed our brand identity completely.",
-    author: "Sarah Chen",
-    role: "Creative Director",
+    quote: "Pažnja prema detaljima i kreativna vizija potpuno su transformisali naš vizualni identitet. Rezultat je premašio sva očekivanja.",
+    author: "Lejla Hadžimuratović",
+    role: "Direktorica Marketinga",
     company: "Studio Forma",
     image: "https://plus.unsplash.com/premium_photo-1689551671548-79ff30459d2a?w=200&auto=format&fit=crop&q=60"
   },
   {
-    quote: "Working with them felt like a true creative partnership from day one.",
-    author: "Marcus Webb",
-    role: "Head of Design",
+    quote: "Saradnja je bila pravo kreativno partnerstvo od prvog dana. Profesionalnost i brzina isporuke su na najvišem nivou.",
+    author: "Damir Kovačević",
+    role: "Voditelj Dizajna",
     company: "Minimal Co",
     image: "https://images.unsplash.com/photo-1649123245135-4db6ead931b5?w=200&auto=format&fit=crop&q=60"
   },
   {
-    quote: "They understand that great design is invisible yet unforgettable.",
-    author: "Elena Voss",
-    role: "Art Director",
+    quote: "Razumije da je odličan dizajn nevidljiv, ali nezaboravan. Naša web stranica nikad nije izgledala bolje.",
+    author: "Amina Bešlić",
+    role: "Art Direktorica",
     company: "Pixel & Co",
     image: "https://images.unsplash.com/photo-1701615004837-40d8573b6652?w=200&auto=format&fit=crop&q=60"
   }

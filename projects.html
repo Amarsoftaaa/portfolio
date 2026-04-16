@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amar Softic | Projekti & Galerija</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/gallery.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" />
+</head>
+
+<body class="min-h-screen bg-white text-gray-900 scroll-smooth" style="font-family:'Space Grotesk',sans-serif">
+
+<!-- NAV -->
+<nav id="mainNav" class="fixed top-0 left-0 right-0 z-[9999] transition-all duration-500">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-16">
+
+    <!-- Logo -->
+    <a href="index.html" class="nav-logo text-sm font-bold tracking-[0.15em] uppercase">AS</a>
+
+    <!-- Links -->
+    <div class="flex items-center gap-1">
+      <a href="projects.html" class="nav-link px-4 py-1.5 text-sm font-medium rounded-full transition-all duration-200 tracking-wide">Projekti</a>
+      <a href="index.html#reviews" class="nav-link px-4 py-1.5 text-sm font-medium rounded-full transition-all duration-200 tracking-wide">Recenzije</a>
+      <a href="contact.html"  class="nav-cta ml-2 px-5 py-1.5 text-sm font-semibold rounded-full transition-all duration-200 tracking-wide">Kontakt</a>
+    </div>
+
+  </div>
+</nav>
+
+<!-- PROJECTS -->
+<section id="projects" class="min-h-screen px-4 sm:px-8 md:px-16 py-24 bg-[#0a0a0a] reveal" style="padding-top:6rem">
+
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Section Header -->
+    <div class="mb-16 reveal">
+      <p class="text-xs tracking-[0.3em] text-white/30 uppercase mb-4">02 / Moj Rad</p>
+      <h2 class="text-5xl md:text-6xl font-bold tracking-tight text-white">Projekti</h2>
+    </div>
+
+    <div class="relative overflow-visible py-4">
+
+      <!-- LEFT ARROW -->
+      <button id="leftBtn"
+        class="absolute -left-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/10 border border-white/20 text-white flex items-center justify-center hover:bg-white hover:text-gray-900 transition duration-200">
+        ←
+      </button>
+
+      <!-- PROJECTS CONTAINER -->
+      <div id="projectsContainer"
+        class="flex gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4">
+
+        <!-- PROJECT CARD 0 -->
+        <div class="glow-card min-w-[420px] snap-center p-6 rounded-2xl flex flex-col gap-5 reveal" data-glow>
+          <div data-glow></div>
+          <div class="relative z-10 flex flex-col gap-5">
+            <div>
+              <span class="text-[0.65rem] text-white/30 tracking-[0.2em] uppercase font-semibold">Web Aplikacija</span>
+              <h3 class="text-xl font-semibold mt-2 text-white">Onyx</h3>
+            </div>
+            <div class="relative w-full aspect-video rounded-xl overflow-hidden">
+              <iframe class="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/q9M0Sc5L1LE?si=wlaVVFIATUmFUCOf"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex gap-2 flex-wrap">
+                <span class="px-2 py-1 bg-white/8 border border-white/15 text-white/60 text-xs rounded-sm">Django</span>
+                <span class="px-2 py-1 bg-white/8 border border-white/15 text-white/60 text-xs rounded-sm">Python</span>
+                <span class="px-2 py-1 bg-white/8 border border-white/15 text-white/60 text-xs rounded-sm">HTML/CSS</span>
+              </div>
+              <a href="https://github.com/Amarsoftaaa" target="_blank" aria-label="GitHub"
+                class="text-xl text-white/30 hover:text-white transition duration-200">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD 1 -->
+        <div class="glow-card min-w-[420px] snap-center p-6 rounded-2xl flex flex-col gap-5 reveal" data-glow>
+          <div data-glow></div>
+          <div class="relative z-10 flex flex-col gap-5">
+            <div>
+              <span class="text-[0.65rem] text-white/30 tracking-[0.2em] uppercase font-semibold">Web Aplikacija</span>
+              <h3 class="text-xl font-semibold mt-2 text-white">Fast Food Website</h3>
+            </div>
+            <div class="relative w-full aspect-video rounded-xl overflow-hidden">
+              <iframe class="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/jvsoyBx1kGg?si=v_huxa2ukKs088Gq"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex gap-2 flex-wrap">
+                <span class="px-2 py-1 bg-white/8 border border-white/15 text-white/60 text-xs rounded-sm">Django</span>
+                <span class="px-2 py-1 bg-white/8 border border-white/15 text-white/60 text-xs rounded-sm">Python</span>
+                <span class="px-2 py-1 bg-white/8 border border-white/15 text-white/60 text-xs rounded-sm">HTML/CSS</span>
+              </div>
+              <a href="https://github.com/Amarsoftaaa" target="_blank" aria-label="GitHub"
+                class="text-xl text-white/30 hover:text-white transition duration-200">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD 2 -->
+        <div class="glow-card min-w-[420px] snap-center p-6 rounded-2xl flex flex-col gap-5 reveal" data-glow>
+          <div data-glow></div>
+          <div class="relative z-10 flex flex-col gap-5">
+            <div>
+              <span class="text-[0.65rem] text-white/30 tracking-[0.2em] uppercase font-semibold">Web Aplikacija</span>
+              <h3 class="text-xl font-semibold mt-2 text-white">Restaurant Panorama</h3>
+            </div>
+            <div class="relative w-full aspect-video rounded-xl overflow-hidden">
+              <iframe class="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/btj5HJ6dATo?si=vRSmS_xQdaa9LNKm"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex gap-2 flex-wrap">
+                <span class="px-2 py-1 bg-white/8 border border-white/15 text-white/60 text-xs rounded-sm">Django</span>
+                <span class="px-2 py-1 bg-white/8 border border-white/15 text-white/60 text-xs rounded-sm">Python</span>
+                <span class="px-2 py-1 bg-white/8 border border-white/15 text-white/60 text-xs rounded-sm">HTML/CSS</span>
+              </div>
+              <a href="https://github.com/Amarsoftaaa/panorama" target="_blank" aria-label="GitHub"
+                class="text-xl text-white/30 hover:text-white transition duration-200">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD 3 -->
+        <div class="glow-card min-w-[420px] snap-center p-6 rounded-2xl flex flex-col gap-5 reveal" data-glow>
+          <div data-glow></div>
+          <div class="relative z-10 flex flex-col gap-5">
+            <div>
+              <span class="text-[0.65rem] text-white/30 tracking-[0.2em] uppercase font-semibold">Web Aplikacija</span>
+              <h3 class="text-xl font-semibold mt-2 text-white">Pancakes Restaurant</h3>
+            </div>
+            <div class="relative w-full aspect-video rounded-xl overflow-hidden">
+              <iframe class="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/kemNiAyxvpM?si=2kbwtTzfkOqte9HD"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex gap-2 flex-wrap">
+                <span class="px-2 py-1 bg-white/8 border border-white/15 text-white/60 text-xs rounded-sm">Django</span>
+                <span class="px-2 py-1 bg-white/8 border border-white/15 text-white/60 text-xs rounded-sm">Python</span>
+                <span class="px-2 py-1 bg-white/8 border border-white/15 text-white/60 text-xs rounded-sm">HTML/CSS</span>
+              </div>
+              <a href="https://github.com/Amarsoftaaa" target="_blank" aria-label="GitHub"
+                class="text-xl text-white/30 hover:text-white transition duration-200">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD 4 -->
+        <div class="glow-card min-w-[420px] snap-center p-6 rounded-2xl flex flex-col gap-5 reveal" data-glow>
+          <div data-glow></div>
+          <div class="relative z-10 flex flex-col gap-5">
+            <div>
+              <span class="text-[0.65rem] text-white/30 tracking-[0.2em] uppercase font-semibold">Web Aplikacija</span>
+              <h3 class="text-xl font-semibold mt-2 text-white">Reinigungs Unternehmen</h3>
+            </div>
+            <div class="relative w-full aspect-video rounded-xl overflow-hidden">
+              <iframe class="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/0-HwLzkYeYI?si=stLv9SEi0jEuz0_p"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex gap-2 flex-wrap">
+                <span class="px-2 py-1 bg-white/8 border border-white/15 text-white/60 text-xs rounded-sm">Django</span>
+                <span class="px-2 py-1 bg-white/8 border border-white/15 text-white/60 text-xs rounded-sm">Python</span>
+                <span class="px-2 py-1 bg-white/8 border border-white/15 text-white/60 text-xs rounded-sm">HTML/CSS</span>
+              </div>
+              <a href="https://github.com/Amarsoftaaa" target="_blank" aria-label="GitHub"
+                class="text-xl text-white/30 hover:text-white transition duration-200">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD 5 -->
+        <div class="glow-card min-w-[420px] snap-center p-6 rounded-2xl flex flex-col gap-5 reveal" data-glow>
+          <div data-glow></div>
+          <div class="relative z-10 flex flex-col gap-5">
+            <div>
+              <span class="text-[0.65rem] text-white/30 tracking-[0.2em] uppercase font-semibold">Web Aplikacija</span>
+              <h3 class="text-xl font-semibold mt-2 text-white">Website Ambulant Pflegedienst</h3>
+            </div>
+            <div class="relative w-full aspect-video rounded-xl overflow-hidden">
+              <iframe class="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/Vs8hqkxgK-8"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex gap-2 flex-wrap">
+                <span class="px-2 py-1 bg-white/8 border border-white/15 text-white/60 text-xs rounded-sm">Django</span>
+                <span class="px-2 py-1 bg-white/8 border border-white/15 text-white/60 text-xs rounded-sm">Python</span>
+                <span class="px-2 py-1 bg-white/8 border border-white/15 text-white/60 text-xs rounded-sm">HTML/CSS</span>
+              </div>
+              <a href="https://github.com/Amarsoftaaa" target="_blank" aria-label="GitHub"
+                class="text-xl text-white/30 hover:text-white transition duration-200">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD 6 -->
+        <div class="glow-card min-w-[420px] snap-center p-6 rounded-2xl flex flex-col gap-5 reveal" data-glow>
+          <div data-glow></div>
+          <div class="relative z-10 flex flex-col gap-5">
+            <div>
+              <span class="text-[0.65rem] text-white/30 tracking-[0.2em] uppercase font-semibold">Web Aplikacija</span>
+              <h3 class="text-xl font-semibold mt-2 text-white">Website JobBoard</h3>
+            </div>
+            <div class="relative w-full aspect-video rounded-xl overflow-hidden">
+              <iframe class="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/FVukLvKOBm0?si=eeflKN_YYTUUnbxi"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex gap-2 flex-wrap">
+                <span class="px-2 py-1 bg-white/8 border border-white/15 text-white/60 text-xs rounded-sm">Django</span>
+                <span class="px-2 py-1 bg-white/8 border border-white/15 text-white/60 text-xs rounded-sm">Python</span>
+                <span class="px-2 py-1 bg-white/8 border border-white/15 text-white/60 text-xs rounded-sm">HTML/CSS</span>
+              </div>
+              <a href="https://github.com/Amarsoftaaa/boardjob" target="_blank" aria-label="GitHub"
+                class="text-xl text-white/30 hover:text-white transition duration-200">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD 7 -->
+        <div class="glow-card min-w-[420px] snap-center p-6 rounded-2xl flex flex-col gap-5 reveal" data-glow>
+          <div data-glow></div>
+          <div class="relative z-10 flex flex-col gap-5">
+            <div>
+              <span class="text-[0.65rem] text-white/30 tracking-[0.2em] uppercase font-semibold">Web Aplikacija</span>
+              <h3 class="text-xl font-semibold mt-2 text-white">Dental WebSite with booking</h3>
+            </div>
+            <div class="relative w-full aspect-video rounded-xl overflow-hidden">
+              <iframe class="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/j6B5VA1WGT8?si=YTWAsrMm_wf7IOy9"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex gap-2 flex-wrap">
+                <span class="px-2 py-1 bg-white/8 border border-white/15 text-white/60 text-xs rounded-sm">Django</span>
+                <span class="px-2 py-1 bg-white/8 border border-white/15 text-white/60 text-xs rounded-sm">Python</span>
+                <span class="px-2 py-1 bg-white/8 border border-white/15 text-white/60 text-xs rounded-sm">HTML/CSS</span>
+              </div>
+              <a href="https://github.com/Amarsoftaaa/dentalnewyork" target="_blank" aria-label="GitHub"
+                class="text-xl text-white/30 hover:text-white transition duration-200">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT ARROW -->
+      <button id="rightBtn"
+        class="absolute -right-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/10 border border-white/20 text-white flex items-center justify-center hover:bg-white hover:text-gray-900 transition duration-200">
+        →
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ─────────── GALLERY DIVIDER ─────────── -->
+<div class="gallery-section-divider"></div>
+
+<!-- GALLERY -->
+<section id="gallery" class="min-h-screen px-4 sm:px-8 md:px-16 py-24">
+
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Section Header -->
+    <div class="mb-12 reveal">
+      <p class="section-eyebrow">— / Galerija</p>
+      <h2 class="text-5xl md:text-6xl font-bold tracking-tight text-gray-900">Galerija</h2>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="gallery-filters" id="galleryFilters">
+      <button class="gallery-filter-btn gallery-filter-active" data-filter="all">Sve</button>
+      <button class="gallery-filter-btn" data-filter="web-app">Web App</button>
+      <button class="gallery-filter-btn" data-filter="design">Dizajn</button>
+      <button class="gallery-filter-btn" data-filter="mobile">Mobilno</button>
+    </div>
+
+    <!-- Gallery Grid — populated by gallery.js -->
+    <div class="gallery-grid" id="galleryGrid"></div>
+
+    <!-- Dots Navigation -->
+    <div class="gallery-dots" id="galleryDots"></div>
+
+  </div>
+
+</section>
+
+<script src="assets/js/script.js"></script>
+<script src="assets/js/gallery-data.js"></script>
+<script src="assets/js/gallery.js"></script>
+</body>
+</html>
