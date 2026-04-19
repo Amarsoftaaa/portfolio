@@ -60,16 +60,6 @@
   }, { passive: true });
 })();
 
-// Spotlight glow — track pointer across all glow cards
-document.addEventListener('pointermove', (e) => {
-  const { clientX: x, clientY: y } = e;
-  document.querySelectorAll('.glow-card').forEach(card => {
-    card.style.setProperty('--x', x.toFixed(2));
-    card.style.setProperty('--xp', (x / window.innerWidth).toFixed(2));
-    card.style.setProperty('--y', y.toFixed(2));
-    card.style.setProperty('--yp', (y / window.innerHeight).toFixed(2));
-  });
-});
 
 // ── Testimonials ──
 const testimonials = [

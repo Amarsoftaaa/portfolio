@@ -27,10 +27,10 @@
 
 <!-- NAV -->
 <nav id="mainNav" class="fixed top-0 left-0 right-0 z-[9999] transition-all duration-500">
-  <div class="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-16">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-20">
 
     <!-- Logo -->
-    <a href="#home" class="nav-logo text-sm font-bold tracking-[0.15em] uppercase">AS</a>
+    <a href="#home" class="nav-logo"><img src="gallery/fyy.png" alt="Logo" class="h-16 w-auto object-contain" /></a>
 
     <!-- Links -->
     <div class="flex items-center gap-1">
@@ -43,152 +43,81 @@
 </nav>
 
 <!-- HOME -->
-<section id="home" style="height:400vh">
-<div id="heroSticky" class="sticky top-0 h-screen min-h-[600px] flex flex-col overflow-hidden bg-black">
-
-  <!-- ── Image Slider Background ── -->
-  <div class="absolute inset-0 z-0">
-    <div class="hero-slide hero-slide-active"
-         style="background-image:url('gallery/hero/Seo-Agentur-Toistry-Gmbh_240ad779dc452aa93c2d1dfbfe6df94c.jpg')"></div>
-    <div class="hero-slide"
-         style="background-image:url('gallery/hero/Website%2BDesign_Trades.webp')"></div>
-    <div class="hero-slide"
-         style="background-image:url('gallery/hero/WebsiteDesign-Antrim.webp')"></div>
-    <div class="hero-slide"
-         style="background-image:url('gallery/hero/treba_mi_nova_202604060816.png')"></div>
-    <!-- Gradient overlay -->
-    <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/80 z-10"></div>
-  </div>
-
-  <!-- ── Slide Indicators ── -->
-  <div class="absolute right-6 md:right-10 top-1/2 -translate-y-1/2 z-30 flex flex-col gap-2.5">
-    <button class="hero-indicator hero-indicator-active" data-slide="0" aria-label="Slide 1"></button>
-    <button class="hero-indicator" data-slide="1" aria-label="Slide 2"></button>
-    <button class="hero-indicator" data-slide="2" aria-label="Slide 3"></button>
-    <button class="hero-indicator" data-slide="3" aria-label="Slide 4"></button>
-  </div>
-
-  <!-- ── CENTER: Main Headline ── -->
-  <div class="relative z-20 flex-1 flex flex-col items-center justify-center px-6 text-center">
-    <div class="hero-fade-in">
-      <p class="text-[0.6rem] tracking-[0.55em] text-white/35 uppercase mb-7 font-semibold">
-        Kreativni Studio — Web &amp; Print Dizajn
-      </p>
-      <h1 class="hero-headline">
-        <span class="hero-headline-bold">DIZAJN KOJI</span>
-        <span class="hero-headline-bold">PRODAJE.</span>
-        <span class="hero-headline-italic">Napravljeno za Rezultate.</span>
-      </h1>
-    </div>
-  </div>
-
-  <!-- ── BOTTOM BAR ── -->
-  <div class="relative z-20 hero-fade-in-delay">
-    <div class="w-full h-px bg-white/10"></div>
-    <div class="grid grid-cols-1 md:grid-cols-3">
-
-      <!-- Left: Web Design -->
-      <div class="hero-bottom-cell md:border-r border-white/10 px-8 md:px-12 py-6 md:py-8">
-        <p class="hero-bottom-label">Web Dizajn</p>
-        <p class="hero-bottom-text">Moderne Web Stranice. Čist Kod.<br>Savršeno Iskustvo.</p>
-      </div>
-
-      <!-- Center: CTA -->
-      <div class="hero-bottom-cell md:border-r border-white/10 border-t md:border-t-0 px-8 md:px-12 py-6 md:py-8 flex flex-col items-center justify-center gap-4 text-center">
-        <p class="text-[0.6rem] tracking-[0.3em] text-white/35 uppercase font-semibold">Spreman za Rast?</p>
-        <p class="text-white text-base md:text-lg font-semibold tracking-tight">Ubrzaj Rast Svog Brenda.</p>
-        <a href="contact.html" class="hero-cta-btn">
-          <span>Zatraži Ponudu</span>
-          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
-            <path d="M1 6.5h11M6.5 1l5.5 5.5-5.5 5.5" stroke="currentColor" stroke-width="1.5"
-                  stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-      </div>
-
-      <!-- Right: Print & Digital -->
-      <div class="hero-bottom-cell border-t md:border-t-0 px-8 md:px-12 py-6 md:py-8 md:text-right">
-        <p class="hero-bottom-label">Print &amp; Digitalno</p>
-        <p class="hero-bottom-text">Flajeri koji se Ističu.<br>Vizuali koji Prodaju.</p>
-      </div>
-
-    </div>
-  </div>
-
-</div>
+<section id="home" class="w-full h-screen">
+  <img src="gallery/sss.png" class="w-full h-full object-cover" alt="Hero" />
 </section>
 
 <!-- Technologies -->
-<section class="w-full py-5 bg-[#0f0f0f] overflow-hidden">
+<section class="w-full py-5 bg-white overflow-hidden" style="border-top:1.5px solid #bfdbfe;border-bottom:1.5px solid #bfdbfe">
   <!-- fade edges -->
   <div class="relative">
-    <div class="pointer-events-none absolute inset-y-0 left-0 w-24 z-10 bg-gradient-to-r from-[#0f0f0f] to-transparent"></div>
-    <div class="pointer-events-none absolute inset-y-0 right-0 w-24 z-10 bg-gradient-to-l from-[#0f0f0f] to-transparent"></div>
+    <div class="pointer-events-none absolute inset-y-0 left-0 w-24 z-10 bg-gradient-to-r from-white to-transparent"></div>
+    <div class="pointer-events-none absolute inset-y-0 right-0 w-24 z-10 bg-gradient-to-l from-white to-transparent"></div>
 
     <div class="marquee-track flex items-center gap-14">
 
       <!-- SET 1 -->
       <div class="flex items-center gap-3 shrink-0">
         <img src="assets/images/ht.png" class="w-10 h-10" alt="HTML">
-        <span class="text-xs text-white/30 font-medium tracking-[0.12em] uppercase">HTML</span>
+        <span class="text-xs text-gray-900 font-medium tracking-[0.12em] uppercase">HTML</span>
       </div>
       <div class="flex items-center gap-3 shrink-0">
         <img src="assets/images/cs.png" class="w-10 h-10" alt="CSS">
-        <span class="text-xs text-white/30 font-medium tracking-[0.12em] uppercase">CSS</span>
+        <span class="text-xs text-gray-900 font-medium tracking-[0.12em] uppercase">CSS</span>
       </div>
       <div class="flex items-center gap-3 shrink-0">
         <img src="assets/images/p.png" class="w-10 h-10" alt="Python">
-        <span class="text-xs text-white/30 font-medium tracking-[0.12em] uppercase">Python</span>
+        <span class="text-xs text-gray-900 font-medium tracking-[0.12em] uppercase">Python</span>
       </div>
       <div class="flex items-center gap-3 shrink-0">
         <img src="assets/images/dja.png" class="w-10 h-10" alt="Django">
-        <span class="text-xs text-white/30 font-medium tracking-[0.12em] uppercase">Django</span>
+        <span class="text-xs text-gray-900 font-medium tracking-[0.12em] uppercase">Django</span>
       </div>
       <div class="flex items-center gap-3 shrink-0">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-10 h-10" alt="JavaScript">
-        <span class="text-xs text-white/30 font-medium tracking-[0.12em] uppercase">JavaScript</span>
+        <span class="text-xs text-gray-900 font-medium tracking-[0.12em] uppercase">JavaScript</span>
       </div>
       <div class="flex items-center gap-3 shrink-0">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-10 h-10" alt="React">
-        <span class="text-xs text-white/30 font-medium tracking-[0.12em] uppercase">React</span>
+        <span class="text-xs text-gray-900 font-medium tracking-[0.12em] uppercase">React</span>
       </div>
       <div class="flex items-center gap-3 shrink-0">
         <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" fill="rgba(255,255,255,0.3)"/>
+          <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" fill="#94a3b8"/>
         </svg>
-        <span class="text-xs text-white/30 font-medium tracking-[0.12em] uppercase">Cloud</span>
+        <span class="text-xs text-gray-900 font-medium tracking-[0.12em] uppercase">Cloud</span>
       </div>
 
       <!-- SET 2 (duplicate for seamless loop) -->
       <div class="flex items-center gap-3 shrink-0">
         <img src="assets/images/ht.png" class="w-10 h-10" alt="HTML">
-        <span class="text-xs text-white/30 font-medium tracking-[0.12em] uppercase">HTML</span>
+        <span class="text-xs text-gray-900 font-medium tracking-[0.12em] uppercase">HTML</span>
       </div>
       <div class="flex items-center gap-3 shrink-0">
         <img src="assets/images/cs.png" class="w-10 h-10" alt="CSS">
-        <span class="text-xs text-white/30 font-medium tracking-[0.12em] uppercase">CSS</span>
+        <span class="text-xs text-gray-900 font-medium tracking-[0.12em] uppercase">CSS</span>
       </div>
       <div class="flex items-center gap-3 shrink-0">
         <img src="assets/images/p.png" class="w-10 h-10" alt="Python">
-        <span class="text-xs text-white/30 font-medium tracking-[0.12em] uppercase">Python</span>
+        <span class="text-xs text-gray-900 font-medium tracking-[0.12em] uppercase">Python</span>
       </div>
       <div class="flex items-center gap-3 shrink-0">
         <img src="assets/images/dja.png" class="w-10 h-10" alt="Django">
-        <span class="text-xs text-white/30 font-medium tracking-[0.12em] uppercase">Django</span>
+        <span class="text-xs text-gray-900 font-medium tracking-[0.12em] uppercase">Django</span>
       </div>
       <div class="flex items-center gap-3 shrink-0">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-10 h-10" alt="JavaScript">
-        <span class="text-xs text-white/30 font-medium tracking-[0.12em] uppercase">JavaScript</span>
+        <span class="text-xs text-gray-900 font-medium tracking-[0.12em] uppercase">JavaScript</span>
       </div>
       <div class="flex items-center gap-3 shrink-0">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-10 h-10" alt="React">
-        <span class="text-xs text-white/30 font-medium tracking-[0.12em] uppercase">React</span>
+        <span class="text-xs text-gray-900 font-medium tracking-[0.12em] uppercase">React</span>
       </div>
       <div class="flex items-center gap-3 shrink-0">
         <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" fill="rgba(255,255,255,0.3)"/>
+          <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" fill="#94a3b8"/>
         </svg>
-        <span class="text-xs text-white/30 font-medium tracking-[0.12em] uppercase">Cloud</span>
+        <span class="text-xs text-gray-900 font-medium tracking-[0.12em] uppercase">Cloud</span>
       </div>
 
     </div>
@@ -202,8 +131,8 @@
 
       <!-- LEFT — IMAGE -->
       <div class="reveal relative order-2 lg:order-1">
-        <div class="absolute -top-3 -left-3 w-10 h-10 border-t-2 border-l-2 border-gray-900"></div>
-        <div class="absolute -bottom-3 -right-3 w-10 h-10 border-b-2 border-r-2 border-gray-900"></div>
+        <div class="absolute -top-3 -left-3 w-10 h-10 border-t-2 border-l-2 border-blue-200"></div>
+        <div class="absolute -bottom-3 -right-3 w-10 h-10 border-b-2 border-r-2 border-blue-200"></div>
         <div class="overflow-hidden shadow-2xl">
           <img src="gallery/newsec.webp" alt="Web Design"
             class="w-full object-cover grayscale hover:grayscale-0 scale-100 hover:scale-105 transition-all duration-700 ease-in-out" />
@@ -215,7 +144,7 @@
         <p class="section-eyebrow">Web Razvoj</p>
         <h2 class="section-heading">
           Web stranice<br>
-          <span class="text-gray-400">koje prodaju.</span><br>
+          <span class="text-blue-500">koje prodaju.</span><br>
           Napravljene da traju.
         </h2>
         <p class="section-body mb-10">
@@ -233,7 +162,7 @@
 </section>
 
 <!-- FLYER & LOGO DESIGN -->
-<section id="flyer" class="relative px-4 sm:px-8 md:px-16 py-32 overflow-hidden bg-[#f5f5f5]">
+<section id="flyer" class="relative px-4 sm:px-8 md:px-16 py-32 overflow-hidden bg-[#f8faff]">
   <div class="max-w-7xl mx-auto">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 
@@ -241,8 +170,8 @@
       <div class="reveal">
         <p class="section-eyebrow">Vizualni Identitet</p>
         <h2 class="section-heading">
-          Logoi.<br>
-          <span class="text-gray-400">Flajeri.</span><br>
+          Logo.<br>
+          <span class="text-blue-500">Flajer.</span><br>
           Brendiranje.
         </h2>
         <p class="section-body mb-10">
@@ -257,8 +186,8 @@
 
       <!-- RIGHT — IMAGE -->
       <div class="reveal relative">
-        <div class="absolute -top-3 -right-3 w-10 h-10 border-t-2 border-r-2 border-gray-900"></div>
-        <div class="absolute -bottom-3 -left-3 w-10 h-10 border-b-2 border-l-2 border-gray-900"></div>
+        <div class="absolute -top-3 -right-3 w-10 h-10 border-t-2 border-r-2 border-blue-200"></div>
+        <div class="absolute -bottom-3 -left-3 w-10 h-10 border-b-2 border-l-2 border-blue-200"></div>
         <div class="overflow-hidden shadow-2xl">
           <img src="gallery/fly.png" alt="Flyer & Logo Design"
             class="w-full object-cover grayscale hover:grayscale-0 scale-100 hover:scale-105 transition-all duration-700 ease-in-out" />
@@ -270,7 +199,7 @@
 </section>
 
 <!-- REVIEWS -->
-<section id="reviews" class="px-4 sm:px-8 md:px-16 py-24 bg-[#f5f5f5] reveal">
+<section id="reviews" class="px-4 sm:px-8 md:px-16 py-24 bg-white reveal">
   <div class="max-w-7xl mx-auto">
 
     <!-- Section Header -->
@@ -286,7 +215,7 @@
 
         <!-- Large index number -->
         <span id="testimonialIndex"
-          class="text-[100px] md:text-[120px] font-light leading-none text-gray-300 select-none shrink-0"
+          class="text-[100px] md:text-[120px] font-light leading-none text-blue-100 select-none shrink-0"
           style="font-feature-settings:'tnum'">
           01
         </span>
@@ -310,7 +239,7 @@
                 <p class="text-sm text-gray-400">
                   <span id="testimonialRole"></span>
                   <span class="mx-2 text-gray-300">/</span>
-                  <span id="testimonialCompany" class="group-hover:text-red-500 transition-colors duration-300"></span>
+                  <span id="testimonialCompany" class="group-hover:text-blue-500 transition-colors duration-300"></span>
                 </p>
               </div>
             </div>
@@ -328,14 +257,14 @@
 
         <div class="flex items-center gap-1">
           <button id="testimonialPrev"
-            class="p-2 rounded-full text-gray-400 hover:text-gray-900 hover:bg-gray-100 transition-all duration-300">
+            class="p-2 rounded-full text-gray-400 hover:text-blue-500 hover:bg-blue-50 transition-all duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="15 18 9 12 15 6"></polyline>
             </svg>
           </button>
           <button id="testimonialNext"
-            class="p-2 rounded-full text-gray-400 hover:text-gray-900 hover:bg-gray-100 transition-all duration-300">
+            class="p-2 rounded-full text-gray-400 hover:text-blue-500 hover:bg-blue-50 transition-all duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="9 18 15 12 9 6"></polyline>
@@ -412,6 +341,7 @@
       <ul class="pf-footer-links">
         <li><a href="https://github.com/Amarsoftaaa" target="_blank">GITHUB</a></li>
         <li><a href="https://linkedin.com/in/amar-softic-450353344" target="_blank">LINKEDIN</a></li>
+        <li><a href="https://www.instagram.com/visualvibe95/" target="_blank">INSTAGRAM</a></li>
       </ul>
     </div>
 

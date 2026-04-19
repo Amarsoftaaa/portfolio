@@ -254,7 +254,7 @@
   font-size: 0.65rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.3);
+  color: #60a5fa;
   font-weight: 600;
   margin-bottom: 1.25rem;
 }
@@ -282,33 +282,33 @@
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #3a3a3a;
+  color: #2563eb;
   background: transparent;
-  border: 1px solid #d4d4d4;
+  border: 1px solid #bfdbfe;
   transition: border-color 0.2s, color 0.2s, background 0.2s;
 }
 
 .service-tag:hover {
-  border-color: #0a0a0a;
-  color: #0a0a0a;
-  background: #f0f0f0;
+  border-color: #3b82f6;
+  color: #1d4ed8;
+  background: #eff6ff;
 }
 
 /* ── Navbar states ── */
 #mainNav {
-  background: transparent;
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 16px rgba(0, 0, 0, 0.05);
 }
 
 #mainNav.nav-scrolled {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
-  box-shadow: 0 1px 24px rgba(0, 0, 0, 0.06);
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.08);
 }
 
 .nav-logo {
-  color: #fff;
+  color: #0a0a0a;
   letter-spacing: 0.15em;
   text-decoration: none;
   transition: color 0.3s;
@@ -319,17 +319,17 @@
 }
 
 .nav-link {
-  color: rgba(255, 255, 255, 0.7);
+  color: #4b5563;
   text-decoration: none;
 }
 
 .nav-link:hover {
-  color: #fff;
-  background: rgba(255, 255, 255, 0.1);
+  color: #0a0a0a;
+  background: rgba(0, 0, 0, 0.05);
 }
 
 #mainNav.nav-scrolled .nav-link {
-  color: #6b6b6b;
+  color: #4b5563;
 }
 
 #mainNav.nav-scrolled .nav-link:hover {
@@ -338,14 +338,14 @@
 }
 
 .nav-cta {
-  background: #fff;
-  color: #0a0a0a;
+  background: #0a0a0a;
+  color: #fff;
   font-weight: 700;
   text-decoration: none;
 }
 
 .nav-cta:hover {
-  background: #e8e8e8;
+  background: #222;
 }
 
 #mainNav.nav-scrolled .nav-cta {
@@ -357,90 +357,19 @@
   background: #222;
 }
 
-/* ── Spotlight / Glow Cards (dark context) ── */
+/* ── Project Cards ── */
 .glow-card {
-  --base: 0;
-  --spread: 60;
-  --radius: 16;
-  --border: 1;
-  --backdrop: hsl(0 0% 10% / 1);
-  --backup-border: hsl(0 0% 18% / 1);
-  --size: 260;
-  --outer: 1;
-  --border-size: calc(var(--border, 1) * 1px);
-  --spotlight-size: calc(var(--size, 150) * 1px);
-  --hue: calc(var(--base) + (var(--xp, 0) * var(--spread, 0)));
-
-  background-image: radial-gradient(
-    var(--spotlight-size) var(--spotlight-size) at
-    calc(var(--x, 0) * 1px)
-    calc(var(--y, 0) * 1px),
-    hsl(var(--hue, 0) 0% 100% / 0.04), transparent
-  );
-  background-color: var(--backdrop);
-  background-size: calc(100% + (2 * var(--border-size))) calc(100% + (2 * var(--border-size)));
-  background-position: 50% 50%;
-  background-attachment: fixed;
-  border: var(--border-size) solid var(--backup-border);
+  background-color: #fff;
+  border: 1px solid #bfdbfe;
+  border-radius: 16px;
   position: relative;
-  touch-action: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 12px rgba(96, 165, 250, 0.08);
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .glow-card:hover {
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
-  border-color: hsl(0 0% 28% / 1);
+  box-shadow: 0 8px 32px rgba(96, 165, 250, 0.18);
+  border-color: #93c5fd;
 }
 
-.glow-card::before,
-.glow-card::after {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  inset: calc(var(--border-size) * -1);
-  border: var(--border-size) solid transparent;
-  border-radius: calc(var(--radius) * 1px);
-  background-attachment: fixed;
-  background-size: calc(100% + (2 * var(--border-size))) calc(100% + (2 * var(--border-size)));
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  mask: linear-gradient(transparent, transparent), linear-gradient(white, white);
-  -webkit-mask: linear-gradient(transparent, transparent), linear-gradient(white, white);
-  mask-clip: padding-box, border-box;
-  -webkit-mask-clip: padding-box, border-box;
-  mask-composite: intersect;
-  -webkit-mask-composite: xor;
-}
-
-.glow-card::before {
-  background-image: radial-gradient(
-    calc(var(--spotlight-size) * 0.75) calc(var(--spotlight-size) * 0.75) at
-    calc(var(--x, 0) * 1px)
-    calc(var(--y, 0) * 1px),
-    hsl(var(--hue, 0) 100% 50% / 1), transparent 100%
-  );
-  filter: brightness(2);
-}
-
-.glow-card::after {
-  background-image: radial-gradient(
-    calc(var(--spotlight-size) * 0.5) calc(var(--spotlight-size) * 0.5) at
-    calc(var(--x, 0) * 1px)
-    calc(var(--y, 0) * 1px),
-    hsl(0 100% 100% / 1), transparent 100%
-  );
-}
-
-/* Inner outer-glow layer */
-.glow-card > [data-glow] {
-  position: absolute;
-  inset: 0;
-  will-change: filter;
-  opacity: var(--outer, 1);
-  border-radius: calc(var(--radius) * 1px);
-  border: calc(var(--border-size) * 20) solid transparent;
-  filter: blur(calc(var(--border-size) * 10));
-  background: none;
-  pointer-events: none;
-}
+.glow-card > [data-glow] { display: none; }

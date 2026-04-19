@@ -4,10 +4,10 @@
    ============================================================ */
 
 .pf-footer {
-  background: #080808;
+  background: #060b14;
   color: #fff;
   font-family: inherit;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(96, 165, 250, 0.1);
 }
 
 /* ── Top bar ─────────────────────────────────────────────────── */
@@ -15,7 +15,7 @@
   display: flex;
   justify-content: flex-end;
   padding: 1.25rem 3rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(96, 165, 250, 0.08);
 }
 
 .pf-footer-top-link {
@@ -23,13 +23,13 @@
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(96, 165, 250, 0.4);
   text-decoration: none;
   transition: color 0.25s ease;
 }
 
 .pf-footer-top-link:hover {
-  color: #fff;
+  color: #60a5fa;
 }
 
 /* ── Main grid ───────────────────────────────────────────────── */
@@ -58,7 +58,7 @@
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(96, 165, 250, 0.4);
   margin: 0 0 1.6rem;
 }
 
@@ -90,7 +90,7 @@
   left: 0;
   width: 0;
   height: 1px;
-  background: #fff;
+  background: #60a5fa;
   transition: width 0.25s ease;
 }
 
@@ -100,7 +100,7 @@
 }
 
 .pf-footer-links a:hover {
-  color: #fff;
+  color: #60a5fa;
 }
 
 .pf-footer-links a:hover::after {
@@ -122,7 +122,7 @@
   align-items: flex-end;
   gap: 0;
   width: 100%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(96, 165, 250, 0.2);
   padding-bottom: 0.5rem;
 }
 
@@ -154,7 +154,7 @@
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #c8932a;
+  color: #60a5fa;
   font-family: inherit;
   padding: 0.25rem 0 0.25rem 1rem;
   transition: color 0.2s ease, letter-spacing 0.2s ease;
@@ -162,7 +162,7 @@
 }
 
 .pf-footer-send:hover {
-  color: #e0a840;
+  color: #93c5fd;
   letter-spacing: 0.22em;
 }
 
@@ -194,26 +194,26 @@
   font-size: 13.5px;
   font-weight: 500;
   letter-spacing: 0.12em;
-  fill: rgba(255, 255, 255, 0.4);
+  fill: rgba(96, 165, 250, 0.35);
   text-transform: uppercase;
   font-family: inherit;
 }
 
-/* Center amber dot */
+/* Center blue dot */
 .pf-footer-logo-dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #c8932a;
-  box-shadow: 0 0 16px rgba(200, 147, 42, 0.7), 0 0 40px rgba(200, 147, 42, 0.3);
+  background: #60a5fa;
+  box-shadow: 0 0 16px rgba(96, 165, 250, 0.7), 0 0 40px rgba(96, 165, 250, 0.3);
   position: relative;
   z-index: 1;
   animation: pf-dot-pulse 3s ease-in-out infinite;
 }
 
 @keyframes pf-dot-pulse {
-  0%, 100% { box-shadow: 0 0 16px rgba(200,147,42,0.7), 0 0 40px rgba(200,147,42,0.3); }
-  50%       { box-shadow: 0 0 24px rgba(200,147,42,0.9), 0 0 60px rgba(200,147,42,0.5); }
+  0%, 100% { box-shadow: 0 0 16px rgba(96,165,250,0.7), 0 0 40px rgba(96,165,250,0.3); }
+  50%       { box-shadow: 0 0 24px rgba(96,165,250,0.9), 0 0 60px rgba(96,165,250,0.5); }
 }
 
 /* ── Bottom bar ──────────────────────────────────────────────── */
@@ -222,7 +222,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 1.25rem 3rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(96, 165, 250, 0.08);
   max-width: 100%;
 }
 
@@ -231,7 +231,7 @@
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(96, 165, 250, 0.25);
   margin: 0;
 }
 
