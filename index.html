@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="bs">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amar Softic | Portfolio</title>
   <link rel="icon" type="image/png" href="gallery/fyy.png" />
-  <meta name="description" content="Web dizajner i developer iz Münchena. Moderna web rješenja, brzo i po fiksnoj cijeni." />
+  <meta name="description" content="Web-Designer und Entwickler aus München. Moderne Web-Lösungen, schnell und zum Festpreis." />
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -37,8 +37,8 @@
 
     <!-- Links -->
     <div class="flex items-center gap-1">
-      <a href="projects.html" class="nav-link px-4 py-1.5 text-sm font-medium rounded-full transition-all duration-200 tracking-wide">Projekti</a>
-      <a href="#reviews"  class="nav-link px-4 py-1.5 text-sm font-medium rounded-full transition-all duration-200 tracking-wide">Recenzije</a>
+      <a href="projects.html" class="nav-link px-4 py-1.5 text-sm font-medium rounded-full transition-all duration-200 tracking-wide">Projekte</a>
+      <a href="#reviews"  class="nav-link px-4 py-1.5 text-sm font-medium rounded-full transition-all duration-200 tracking-wide">Bewertungen</a>
       <a href="contact.html"  class="nav-cta ml-2 px-5 py-1.5 text-sm font-semibold rounded-full transition-all duration-200 tracking-wide">Kontakt</a>
     </div>
 
@@ -46,8 +46,35 @@
 </nav>
 
 <!-- HOME -->
-<section id="home" class="w-full h-screen">
-  <img src="gallery/sss.png" class="w-full h-full object-cover" alt="Hero" />
+<section id="home" class="w-full h-screen flex flex-col items-center justify-center" style="background:#060b14">
+
+  <!-- Subtle radial glow behind logo -->
+  <div class="absolute pointer-events-none" style="width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(96,165,250,0.10) 0%,transparent 70%);transform:translateY(-10%)"></div>
+
+  <!-- Animated SVG -->
+  <img src="gallery/fyy-animated.svg" alt="VisualVibe" class="relative z-10 w-52 h-52 md:w-64 md:h-64 mb-2" />
+
+  <!-- VisualVibe -->
+  <h1 class="relative z-10 font-black tracking-tight leading-none"
+      style="font-size:clamp(3.2rem,10vw,8rem);
+             background:linear-gradient(135deg,#e0f2fe 0%,#93c5fd 35%,#c4b5fd 65%,#f0abfc 100%);
+             -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+             filter:drop-shadow(0 0 32px rgba(147,197,253,0.35));
+             letter-spacing:-0.03em">
+    VisualVibe
+  </h1>
+
+  <!-- WEB DIGITAL AGENCY -->
+  <p class="relative z-10 mt-3 font-semibold tracking-[0.32em] uppercase"
+     style="font-size:clamp(0.6rem,1.6vw,0.85rem);
+            color:rgba(255,255,255,0.38);
+            letter-spacing:0.38em">
+    Web &nbsp;Digital &nbsp;Agency
+  </p>
+
+  <!-- thin gold accent line -->
+  <div class="relative z-10 mt-5" style="width:48px;height:1px;background:linear-gradient(90deg,transparent,rgba(196,181,253,0.6),transparent)"></div>
+
 </section>
 
 <!-- Technologies -->
@@ -144,18 +171,18 @@
 
       <!-- RIGHT — TEXT -->
       <div class="reveal order-1 lg:order-2">
-        <p class="section-eyebrow">Web Razvoj</p>
+        <p class="section-eyebrow">Web-Entwicklung</p>
         <h2 class="section-heading">
-          Web stranice<br>
-          <span class="text-blue-500">koje prodaju.</span><br>
-          Napravljene da traju.
+          Webseiten<br>
+          <span class="text-blue-500">die verkaufen.</span><br>
+          Gemacht um zu bleiben.
         </h2>
         <p class="section-body mb-10">
-          Od landing stranica do full-stack web aplikacija — dizajniramo i gradimo brze, moderne web stranice koje izgledaju odlično i rade još bolje.
+          Von Landing Pages bis Full-Stack Web-Applikationen — wir gestalten und bauen schnelle, moderne Webseiten, die großartig aussehen und noch besser performen.
         </p>
         <div class="flex flex-wrap gap-3">
-          <span class="service-tag">UI / UX Dizajn</span>
-          <span class="service-tag">Frontend Razvoj</span>
+          <span class="service-tag">UI / UX Design</span>
+          <span class="service-tag">Frontend-Entwicklung</span>
           <span class="service-tag">Full-Stack</span>
         </div>
       </div>
@@ -171,19 +198,19 @@
 
       <!-- LEFT — TEXT -->
       <div class="reveal">
-        <p class="section-eyebrow">Vizualni Identitet</p>
+        <p class="section-eyebrow">Visuelle Identität</p>
         <h2 class="section-heading">
           Logo.<br>
-          <span class="text-blue-500">Flajer.</span><br>
-          Brendiranje.
+          <span class="text-blue-500">Flyer.</span><br>
+          Branding.
         </h2>
         <p class="section-body mb-10">
-          Svaki brend počinje jednom slikom. Kreiramo vizualne identitete koji ostavljaju trag — od minimalnih logoa do upečatljivih promo flajera koji zaustave scroll.
+          Jede Marke beginnt mit einem Bild. Wir kreieren visuelle Identitäten, die einen bleibenden Eindruck hinterlassen — von minimalistischen Logos bis zu eindrucksvollen Promo-Flyern.
         </p>
         <div class="flex flex-wrap gap-3">
-          <span class="service-tag">Dizajn Logoa</span>
-          <span class="service-tag">Flajeri i Posteri</span>
-          <span class="service-tag">Identitet Brenda</span>
+          <span class="service-tag">Logo-Design</span>
+          <span class="service-tag">Flyer & Poster</span>
+          <span class="service-tag">Markenidentität</span>
         </div>
       </div>
 
@@ -222,24 +249,24 @@
 
       <!-- RIGHT — TEXT -->
       <div class="reveal order-1 lg:order-2">
-        <p class="text-[0.6rem] tracking-[0.4em] font-semibold uppercase mb-5" style="color:#60a5fa">Metodologija Rada</p>
+        <p class="text-[0.6rem] tracking-[0.4em] font-semibold uppercase mb-5" style="color:#60a5fa">Arbeitsmethodik</p>
         <h2 class="font-black leading-[0.95] tracking-tight mb-8" style="font-size:clamp(2.6rem,6vw,4.5rem);color:#fff">
-          Dizajn koji<br>
-          <span style="color:#60a5fa">Performira</span><br>
-          &amp; Prodaje.
+          Design der<br>
+          <span style="color:#60a5fa">Performt</span><br>
+          &amp; Verkauft.
         </h2>
         <p class="leading-relaxed mb-5" style="font-size:1rem;color:rgba(255,255,255,0.5);max-width:28rem">
-          Svaki projekat gradimo po principu <strong style="color:#93c5fd;font-weight:600">„Konverzijskog Dizajna"</strong> — svaki piksel, svaka sekcija i svaki poziv na akciju optimiziran je za korisničko iskustvo i rezultate.
+          Jedes Projekt bauen wir nach dem Prinzip des <strong style="color:#93c5fd;font-weight:600">„Conversion-Designs"</strong> — jedes Pixel, jede Sektion und jeder Call-to-Action ist auf Nutzererlebnis und Ergebnisse optimiert.
         </p>
         <p class="leading-relaxed mb-10" style="font-size:1rem;color:rgba(255,255,255,0.5);max-width:28rem">
-          Isporučujemo digitalna rješenja koja ne izgledaju samo premium — ona rade kao marketing stroj koji nadmašuje konkurenciju.
+          Wir liefern digitale Lösungen, die nicht nur premium aussehen — sie funktionieren als Marketingmaschine, die die Konkurrenz übertrifft.
         </p>
         <a href="contact.html"
           class="inline-flex items-center gap-3 border font-semibold text-sm tracking-[0.08em] uppercase px-7 py-4 transition-all duration-300"
           style="border-color:rgba(255,255,255,0.25);color:#fff;border-radius:2px"
           onmouseover="this.style.borderColor='#60a5fa';this.style.color='#60a5fa'"
           onmouseout="this.style.borderColor='rgba(255,255,255,0.25)';this.style.color='#fff'">
-          Istraži Usluge
+          Leistungen entdecken
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
@@ -260,14 +287,14 @@
 
       <!-- LEFT -->
       <div class="reveal">
-        <p class="text-[0.6rem] tracking-[0.4em] font-semibold uppercase mb-6" style="color:#60a5fa">Rezultati Izvršenja</p>
+        <p class="text-[0.6rem] tracking-[0.4em] font-semibold uppercase mb-6" style="color:#60a5fa">Leistungsergebnisse</p>
         <h2 class="font-black leading-[0.92] tracking-tight mb-6" style="font-size:clamp(2.8rem,6.5vw,5rem)">
-          <span style="color:#0a0a0a">Dominiraš</span><br>
-          <span style="color:#0a0a0a">Tržištem.</span><br>
-          <span style="color:#2563eb">Garantovano.</span>
+          <span style="color:#0a0a0a">Du dominierst</span><br>
+          <span style="color:#0a0a0a">den Markt.</span><br>
+          <span style="color:#2563eb">Garantiert.</span>
         </h2>
         <p class="leading-relaxed mb-12" style="font-size:1rem;color:#6b7280;max-width:30rem">
-          Ne gradimo samo web stranice — gradimo revenue engine. Svaki piksel i svaki dizajn element optimiziran je za leadove i direktan komercijalni rast.
+          Wir bauen nicht nur Webseiten — wir bauen eine Revenue-Engine. Jedes Pixel und jedes Design-Element ist auf Leads und direktes Umsatzwachstum optimiert.
         </p>
 
         <!-- Stats grid -->
@@ -275,12 +302,12 @@
 
           <div class="reveal">
             <p class="font-black tracking-tight mb-1" style="font-size:2.8rem;color:#60a5fa;line-height:1">0.8s</p>
-            <p class="text-xs font-semibold uppercase tracking-[0.12em]" style="color:#6b7280">Prosječna Brzina Učitavanja</p>
+            <p class="text-xs font-semibold uppercase tracking-[0.12em]" style="color:#6b7280">Durchschnittliche Ladezeit</p>
           </div>
 
           <div class="reveal">
             <p class="font-black tracking-tight mb-1" style="font-size:2.8rem;color:#60a5fa;line-height:1">+142%</p>
-            <p class="text-xs font-semibold uppercase tracking-[0.12em]" style="color:#6b7280">Rast Konverzija</p>
+            <p class="text-xs font-semibold uppercase tracking-[0.12em]" style="color:#6b7280">Konversionssteigerung</p>
           </div>
 
           <div class="reveal">
@@ -290,7 +317,7 @@
 
           <div class="reveal">
             <p class="font-black tracking-tight mb-1" style="font-size:2.8rem;color:#60a5fa;line-height:1">24/7</p>
-            <p class="text-xs font-semibold uppercase tracking-[0.12em]" style="color:#6b7280">Tehnička Podrška</p>
+            <p class="text-xs font-semibold uppercase tracking-[0.12em]" style="color:#6b7280">Technischer Support</p>
           </div>
 
         </div>
@@ -320,8 +347,8 @@
 
     <!-- Section Header -->
     <div class="mb-16 reveal">
-      <p class="section-eyebrow">03 / Recenzije</p>
-      <h2 class="text-5xl md:text-6xl font-bold tracking-tight text-gray-900">Šta Klijenti Kažu</h2>
+      <p class="section-eyebrow">03 / Bewertungen</p>
+      <h2 class="text-5xl md:text-6xl font-bold tracking-tight text-gray-900">Was Kunden sagen</h2>
     </div>
 
     <!-- Testimonial widget -->
@@ -398,7 +425,7 @@
 
   <!-- Top bar -->
   <div class="pf-footer-topbar">
-    <a href="#home" class="pf-footer-top-link">+ NA VRH</a>
+    <a href="#home" class="pf-footer-top-link">+ NACH OBEN</a>
   </div>
 
   <!-- Main grid -->
@@ -406,32 +433,32 @@
 
     <!-- Navigation -->
     <div class="pf-footer-col">
-      <p class="pf-footer-label">NAVIGACIJA</p>
+      <p class="pf-footer-label">NAVIGATION</p>
       <ul class="pf-footer-links">
-        <li><a href="#home">POČETNA</a></li>
-        <li><a href="projects.html">PROJEKTI</a></li>
-        <li><a href="projects.html#gallery">GALERIJA</a></li>
-        <li><a href="#reviews">RECENZIJE</a></li>
+        <li><a href="#home">STARTSEITE</a></li>
+        <li><a href="projects.html">PROJEKTE</a></li>
+        <li><a href="projects.html#gallery">GALERIE</a></li>
+        <li><a href="#reviews">BEWERTUNGEN</a></li>
         <li><a href="contact.html">KONTAKT</a></li>
       </ul>
     </div>
 
     <!-- Legal -->
     <div class="pf-footer-col">
-      <p class="pf-footer-label">PRAVNE INFORMACIJE</p>
+      <p class="pf-footer-label">RECHTLICHES</p>
       <ul class="pf-footer-links">
-        <li><a href="#">ZAŠTITA PODATAKA</a></li>
-        <li><a href="#">UVJETI KORIŠTENJA</a></li>
+        <li><a href="#">DATENSCHUTZ</a></li>
+        <li><a href="#">NUTZUNGSBEDINGUNGEN</a></li>
         <li><a href="#">IMPRESSUM</a></li>
       </ul>
     </div>
 
     <!-- Center: Newsletter + rotating logo -->
     <div class="pf-footer-center">
-      <p class="pf-footer-label">PRETPLATI SE NA NEWSLETTER</p>
+      <p class="pf-footer-label">NEWSLETTER ABONNIEREN</p>
       <div class="pf-footer-newsletter">
-        <input type="email" placeholder="E-MAIL ADRESA" class="pf-footer-input" />
-        <button type="button" class="pf-footer-send">POŠALJI</button>
+        <input type="email" placeholder="E-MAIL ADRESSE" class="pf-footer-input" />
+        <button type="button" class="pf-footer-send">SENDEN</button>
       </div>
 
       <!-- Circular rotating logo -->
@@ -453,7 +480,7 @@
 
     <!-- Social -->
     <div class="pf-footer-col pf-footer-col-right">
-      <p class="pf-footer-label">PRATITE ME</p>
+      <p class="pf-footer-label">FOLGE MIR</p>
       <ul class="pf-footer-links">
         <li><a href="https://github.com/Amarsoftaaa" target="_blank">GITHUB</a></li>
         <li><a href="https://linkedin.com/in/amar-softic-450353344" target="_blank">LINKEDIN</a></li>
@@ -465,7 +492,7 @@
 
   <!-- Bottom bar -->
   <div class="pf-footer-bottom">
-    <p>© 2026 Amar Softic. Sva prava zadržana.</p>
+    <p>© 2026 Amar Softic. Alle Rechte vorbehalten.</p>
     <p>• AMAR SOFTIC</p>
   </div>
 

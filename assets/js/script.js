@@ -64,23 +64,23 @@
 // ── Testimonials ──
 const testimonials = [
   {
-    quote: "Pažnja prema detaljima i kreativna vizija potpuno su transformisali naš vizualni identitet. Rezultat je premašio sva očekivanja.",
+    quote: "Die Liebe zum Detail und die kreative Vision haben unsere visuelle Identität völlig transformiert. Das Ergebnis hat alle Erwartungen übertroffen.",
     author: "Lejla Hadžimuratović",
-    role: "Direktorica Marketinga",
+    role: "Marketingleiterin",
     company: "Studio Forma",
     image: "https://plus.unsplash.com/premium_photo-1689551671548-79ff30459d2a?w=200&auto=format&fit=crop&q=60"
   },
   {
-    quote: "Saradnja je bila pravo kreativno partnerstvo od prvog dana. Profesionalnost i brzina isporuke su na najvišem nivou.",
+    quote: "Die Zusammenarbeit war von Anfang an eine echte kreative Partnerschaft. Professionalität und Liefergeschwindigkeit sind auf höchstem Niveau.",
     author: "Damir Kovačević",
-    role: "Voditelj Dizajna",
+    role: "Design Lead",
     company: "Minimal Co",
     image: "https://images.unsplash.com/photo-1649123245135-4db6ead931b5?w=200&auto=format&fit=crop&q=60"
   },
   {
-    quote: "Razumije da je odličan dizajn nevidljiv, ali nezaboravan. Naša web stranica nikad nije izgledala bolje.",
+    quote: "Er versteht, dass gutes Design unsichtbar aber unvergesslich ist. Unsere Website hat noch nie besser ausgesehen.",
     author: "Amina Bešlić",
-    role: "Art Direktorica",
+    role: "Art-Direktorin",
     company: "Pixel & Co",
     image: "https://images.unsplash.com/photo-1701615004837-40d8573b6652?w=200&auto=format&fit=crop&q=60"
   }
@@ -199,10 +199,10 @@ document.addEventListener("DOMContentLoaded", () => {
   revealOnScroll();
 
   const typingWords = [
-    "Python & Django Developer",
-    "Backend Developer",
-    "Web Application Builder",
-    "Junior Full Stack Developer"
+    "Python & Django Entwickler",
+    "Backend Entwickler",
+    "Web-Applikationen Entwickler",
+    "Junior Full Stack Entwickler"
   ];
 
   const typingText = document.getElementById("typing-text");

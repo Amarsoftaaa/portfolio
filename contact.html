@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="bs">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -212,8 +212,8 @@
     <a href="index.html" class="nav-logo"><img src="gallery/fyy.png" alt="Logo" class="h-16 w-auto object-contain" /></a>
 
     <div class="flex items-center gap-1">
-      <a href="projects.html"         class="nav-link px-4 py-1.5 text-sm font-medium rounded-full transition-all duration-200 tracking-wide">Projekti</a>
-      <a href="index.html#reviews"    class="nav-link px-4 py-1.5 text-sm font-medium rounded-full transition-all duration-200 tracking-wide">Recenzije</a>
+      <a href="projects.html"         class="nav-link px-4 py-1.5 text-sm font-medium rounded-full transition-all duration-200 tracking-wide">Projekte</a>
+      <a href="index.html#reviews"    class="nav-link px-4 py-1.5 text-sm font-medium rounded-full transition-all duration-200 tracking-wide">Bewertungen</a>
       <a href="contact.html"          class="nav-cta ml-2 px-5 py-1.5 text-sm font-semibold rounded-full transition-all duration-200 tracking-wide">Kontakt</a>
     </div>
 
@@ -227,15 +227,15 @@
 
     <!-- LEFT -->
     <div class="flex flex-col justify-center">
-      <p class="section-eyebrow" style="color:var(--accent)">04 / Pokreni Projekat</p>
-      <h2 class="text-5xl md:text-6xl font-bold tracking-tight leading-none mb-6 mt-3">SAZNAJ<br>CIJENU<br>VEĆ DANAS</h2>
+      <p class="section-eyebrow" style="color:var(--accent)">04 / Projekt starten</p>
+      <h2 class="text-5xl md:text-6xl font-bold tracking-tight leading-none mb-6 mt-3">PREIS JETZT<br>HERAUS-<br>FINDEN</h2>
       <p class="text-base leading-relaxed max-w-xs mb-12" style="color:#64748b">
-        Imaš projekat na umu? Rado bih čuo o tome. Ispuni kratak upitnik i javit ću se u roku od 24h.
+        Haben Sie ein Projekt im Sinn? Ich höre gerne davon. Füllen Sie den kurzen Fragebogen aus und ich melde mich innerhalb von 24h.
       </p>
       <div class="flex flex-col gap-4">
-        <div class="trust-item"><span class="trust-dot"></span>Besplatna konsultacija</div>
-        <div class="trust-item"><span class="trust-dot"></span>Odgovor za 24 sata</div>
-        <div class="trust-item"><span class="trust-dot"></span>Bez obaveza</div>
+        <div class="trust-item"><span class="trust-dot"></span>Kostenlose Beratung</div>
+        <div class="trust-item"><span class="trust-dot"></span>Antwort innerhalb 24 Stunden</div>
+        <div class="trust-item"><span class="trust-dot"></span>Unverbindlich</div>
       </div>
     </div>
 
@@ -245,7 +245,7 @@
       <!-- Progress bar -->
       <div class="pb-track"><div class="pb-fill" id="pbFill"></div></div>
       <div class="pb-meta">
-        <span class="pb-label" id="pbLabel">Korak 1 od 5</span>
+        <span class="pb-label" id="pbLabel">Schritt 1 von 5</span>
         <span id="pbPct">20%</span>
       </div>
 
@@ -254,107 +254,106 @@
 
         <!-- Step 1 -->
         <div class="step active" data-step="1">
-          <p class="step-q">Šta treba napraviti?</p>
-          <p class="step-hint">Možeš odabrati više opcija</p>
+          <p class="step-q">Was soll gemacht werden?</p>
+          <p class="step-hint">Mehrere Optionen möglich</p>
           <div class="cb-list" id="s1list">
             <label class="cb-item">
               <span class="cb-box"><svg width="11" height="8" viewBox="0 0 11 8" fill="none"><path d="M1 4L4 7L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-              Napraviti web stranicu
+              Website erstellen
             </label>
             <label class="cb-item">
               <span class="cb-box"><svg width="11" height="8" viewBox="0 0 11 8" fill="none"><path d="M1 4L4 7L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-              Napraviti online shop
+              Online Shop erstellen
             </label>
             <label class="cb-item">
               <span class="cb-box"><svg width="11" height="8" viewBox="0 0 11 8" fill="none"><path d="M1 4L4 7L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-              Redizajn web stranice
+              Website neu gestalten
             </label>
             <label class="cb-item">
               <span class="cb-box"><svg width="11" height="8" viewBox="0 0 11 8" fill="none"><path d="M1 4L4 7L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-              Redizajn online shopa
+              Online Shop neu gestalten
             </label>
           </div>
           <div class="step-nav">
-            <button class="btn-back hide">← Nazad</button>
-            <button class="btn-next" id="s1next" disabled>Dalje →</button>
+            <button class="btn-back hide">← Zurück</button>
+            <button class="btn-next" id="s1next" disabled>Weiter →</button>
           </div>
         </div>
 
         <!-- Step 2 -->
         <div class="step" data-step="2">
-          <p class="step-q">Da li ste već kupili domenu?</p>
-          <p class="step-hint">Odaberi jednu opciju</p>
+          <p class="step-q">Haben Sie bereits eine Domain?</p>
+          <p class="step-hint">Eine Option auswählen</p>
           <div class="opt-grid one-col" id="s2list">
-            <button class="opt-btn" data-val="Da"><span class="opt-dot"></span>Da</button>
-            <button class="opt-btn" data-val="Ne"><span class="opt-dot"></span>Ne</button>
-            <button class="opt-btn" data-val="Ne znam"><span class="opt-dot"></span>Ne znam</button>
+            <button class="opt-btn" data-val="Ja"><span class="opt-dot"></span>Ja</button>
+            <button class="opt-btn" data-val="Nein"><span class="opt-dot"></span>Nein</button>
+            <button class="opt-btn" data-val="Weiß nicht"><span class="opt-dot"></span>Weiß nicht</button>
           </div>
           <div class="step-nav">
-            <button class="btn-back" data-go="1">← Nazad</button>
-            <button class="btn-next" id="s2next" disabled>Dalje →</button>
+            <button class="btn-back" data-go="1">← Zurück</button>
+            <button class="btn-next" id="s2next" disabled>Weiter →</button>
           </div>
         </div>
 
         <!-- Step 3 -->
         <div class="step" data-step="3">
-          <p class="step-q">Da li već postoji logo?</p>
-          <p class="step-hint">Odaberi jednu opciju</p>
+          <p class="step-q">Gibt es bereits ein Logo?</p>
+          <p class="step-hint">Eine Option auswählen</p>
           <div class="opt-grid one-col" id="s3list">
-            <button class="opt-btn" data-val="Da"><span class="opt-dot"></span>Da</button>
-            <button class="opt-btn" data-val="Ne, treba napraviti"><span class="opt-dot"></span>Ne, treba napraviti</button>
-            <button class="opt-btn" data-val="Treba ga osvježiti"><span class="opt-dot"></span>Treba ga osvježiti</button>
+            <button class="opt-btn" data-val="Ja"><span class="opt-dot"></span>Ja</button>
+            <button class="opt-btn" data-val="Nein, muss erstellt werden"><span class="opt-dot"></span>Nein, muss erstellt werden</button>
+            <button class="opt-btn" data-val="Muss aufgefrischt werden"><span class="opt-dot"></span>Muss aufgefrischt werden</button>
           </div>
           <div class="step-nav">
-            <button class="btn-back" data-go="2">← Nazad</button>
-            <button class="btn-next" id="s3next" disabled>Dalje →</button>
+            <button class="btn-back" data-go="2">← Zurück</button>
+            <button class="btn-next" id="s3next" disabled>Weiter →</button>
           </div>
         </div>
 
         <!-- Step 4 -->
         <div class="step" data-step="4">
-          <p class="step-q">Kada vam treba Web stranica?</p>
-          <p class="step-hint">Odaberi jednu opciju</p>
+          <p class="step-q">Wann brauchen Sie die Website?</p>
+          <p class="step-hint">Eine Option auswählen</p>
           <div class="opt-grid one-col" id="s4list">
-            <button class="opt-btn" data-val="Što prije"><span class="opt-dot"></span>Što prije</button>
-            <button class="opt-btn" data-val="U roku 10 dana"><span class="opt-dot"></span>U roku 10 dana</button>
-            <button class="opt-btn" data-val="U roku mjesec dana"><span class="opt-dot"></span>U roku mjesec dana</button>
+            <button class="opt-btn" data-val="So schnell wie möglich"><span class="opt-dot"></span>So schnell wie möglich</button>
+            <button class="opt-btn" data-val="Innerhalb 10 Tage"><span class="opt-dot"></span>Innerhalb 10 Tage</button>
+            <button class="opt-btn" data-val="Innerhalb eines Monats"><span class="opt-dot"></span>Innerhalb eines Monats</button>
           </div>
           <div class="step-nav">
-            <button class="btn-back" data-go="3">← Nazad</button>
-            <button class="btn-next" id="s4next" disabled>Dalje →</button>
+            <button class="btn-back" data-go="3">← Zurück</button>
+            <button class="btn-next" id="s4next" disabled>Weiter →</button>
           </div>
         </div>
 
         <!-- Step 5 -->
         <div class="step" data-step="5">
-          <p class="step-q">Kako te možemo kontaktirati?</p>
-          <p class="step-hint">Javit ćemo se u roku od 24 sata</p>
-          <!-- Honeypot: vidljivo botovima, skriveno ljudima -->
+          <p class="step-q">Wie können wir Sie kontaktieren?</p>
+          <p class="step-hint">Wir melden uns innerhalb von 24 Stunden</p>
           <input type="text" id="fWebsite" name="_gotcha" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true" />
           <div class="fg">
-            <label>Ime i prezime</label>
-            <input type="text" id="fName" placeholder="Npr. Amina Bešlić" autocomplete="name" />
-            <p class="err-txt">Molimo unesite vaše ime.</p>
+            <label>Vor- und Nachname</label>
+            <input type="text" id="fName" placeholder="z.B. Max Mustermann" autocomplete="name" />
+            <p class="err-txt">Bitte geben Sie Ihren Namen ein.</p>
           </div>
           <div class="fg">
-            <label>Email adresa</label>
-            <input type="email" id="fEmail" placeholder="vasa@email.com" autocomplete="email" />
-            <p class="err-txt">Molimo unesite validnu email adresu.</p>
+            <label>E-Mail Adresse</label>
+            <input type="email" id="fEmail" placeholder="ihre@email.de" autocomplete="email" />
+            <p class="err-txt">Bitte geben Sie eine gültige E-Mail Adresse ein.</p>
           </div>
           <div class="fg">
-            <label>Telefon <span class="opt-tag">(opciono)</span></label>
-            <input type="tel" id="fPhone" placeholder="+387 61 000 000" autocomplete="tel" />
+            <label>Telefon <span class="opt-tag">(optional)</span></label>
+            <input type="tel" id="fPhone" placeholder="+49 151 000 000" autocomplete="tel" />
           </div>
           <label class="privacy-row" id="privacyRow">
             <span class="priv-box"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            <span class="priv-txt">Slažem se s obradom mojih podataka u svrhu odgovora na upit. Tvoji podaci neće biti dijeljeni s trećim stranama.</span>
+            <span class="priv-txt">Ich stimme der Verarbeitung meiner Daten zum Zweck der Beantwortung meiner Anfrage zu. Ihre Daten werden nicht an Dritte weitergegeben.</span>
           </label>
           <button class="btn-submit" id="btnSubmit" disabled>
-            <span id="submitTxt">Pošalji Upit</span>
+            <span id="submitTxt">Anfrage senden</span>
             <div class="spinner" id="spinner"></div>
           </button>
           <div class="step-nav" style="margin-top:.75rem">
-            <button class="btn-back" data-go="4">← Nazad</button>
+            <button class="btn-back" data-go="4">← Zurück</button>
             <span></span>
           </div>
         </div>
@@ -369,8 +368,8 @@
             <path class="ck-check" d="M14 25l8 8 14-14"/>
           </svg>
         </div>
-        <h2>Hvala ti!</h2>
-        <p>Tvoj upit je uspješno primljen.<br><span class="hl">Javit ćemo se u roku od 24 sata.</span></p>
+        <h2>Danke!</h2>
+        <p>Ihre Anfrage wurde erfolgreich empfangen.<br><span class="hl">Wir melden uns innerhalb von 24 Stunden.</span></p>
       </div>
 
     </div><!-- /funnel-card -->
@@ -382,36 +381,36 @@
 <footer class="pf-footer">
 
   <div class="pf-footer-topbar">
-    <a href="#contact" class="pf-footer-top-link">+ NA VRH</a>
+    <a href="#contact" class="pf-footer-top-link">+ NACH OBEN</a>
   </div>
 
   <div class="pf-footer-main">
 
     <div class="pf-footer-col">
-      <p class="pf-footer-label">NAVIGACIJA</p>
+      <p class="pf-footer-label">NAVIGATION</p>
       <ul class="pf-footer-links">
-        <li><a href="index.html">POČETNA</a></li>
-        <li><a href="projects.html">PROJEKTI</a></li>
-        <li><a href="projects.html#gallery">GALERIJA</a></li>
-        <li><a href="index.html#reviews">RECENZIJE</a></li>
+        <li><a href="index.html">STARTSEITE</a></li>
+        <li><a href="projects.html">PROJEKTE</a></li>
+        <li><a href="projects.html#gallery">GALERIE</a></li>
+        <li><a href="index.html#reviews">BEWERTUNGEN</a></li>
         <li><a href="contact.html">KONTAKT</a></li>
       </ul>
     </div>
 
     <div class="pf-footer-col">
-      <p class="pf-footer-label">PRAVNE INFORMACIJE</p>
+      <p class="pf-footer-label">RECHTLICHES</p>
       <ul class="pf-footer-links">
-        <li><a href="#">ZAŠTITA PODATAKA</a></li>
-        <li><a href="#">UVJETI KORIŠTENJA</a></li>
+        <li><a href="#">DATENSCHUTZ</a></li>
+        <li><a href="#">NUTZUNGSBEDINGUNGEN</a></li>
         <li><a href="#">IMPRESSUM</a></li>
       </ul>
     </div>
 
     <div class="pf-footer-center">
-      <p class="pf-footer-label">PRETPLATI SE NA NEWSLETTER</p>
+      <p class="pf-footer-label">NEWSLETTER ABONNIEREN</p>
       <div class="pf-footer-newsletter">
-        <input type="email" placeholder="E-MAIL ADRESA" class="pf-footer-input" />
-        <button type="button" class="pf-footer-send">POŠALJI</button>
+        <input type="email" placeholder="E-MAIL ADRESSE" class="pf-footer-input" />
+        <button type="button" class="pf-footer-send">SENDEN</button>
       </div>
       <div class="pf-footer-logo-wrap">
         <svg class="pf-footer-logo-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -430,7 +429,7 @@
     </div>
 
     <div class="pf-footer-col pf-footer-col-right">
-      <p class="pf-footer-label">PRATITE ME</p>
+      <p class="pf-footer-label">FOLGE MIR</p>
       <ul class="pf-footer-links">
         <li><a href="https://github.com/Amarsoftaaa" target="_blank">GITHUB</a></li>
         <li><a href="https://linkedin.com/in/amar-softic-450353344" target="_blank">LINKEDIN</a></li>
@@ -441,7 +440,7 @@
   </div>
 
   <div class="pf-footer-bottom">
-    <p>© 2026 Amar Softic. Sva prava zadržana.</p>
+    <p>© 2026 Amar Softic. Alle Rechte vorbehalten.</p>
     <p>• AMAR SOFTIC</p>
   </div>
 
@@ -466,7 +465,7 @@
     var pct = Math.round((step / TOTAL) * 100);
     pbFill.style.width = pct + '%';
     pbPct.textContent  = pct + '%';
-    pbLabel.textContent = 'Korak ' + step + ' od ' + TOTAL;
+    pbLabel.textContent = 'Schritt ' + step + ' von ' + TOTAL;
   }
 
   function showStep(next, direction) {
@@ -568,7 +567,7 @@
 
       btnSubmit.disabled    = true;
       spinner.style.display = 'block';
-      submitTxt.textContent = 'Slanje...';
+      submitTxt.textContent = 'Wird gesendet...';
 
       fetch('https://formspree.io/f/meelaeby', {
         method: 'POST',
@@ -592,15 +591,15 @@
           document.querySelector('.pb-meta').style.display  = 'none';
           successScr.classList.add('show');
         } else {
-          var msg = (json.errors && json.errors[0] && json.errors[0].message) || 'Greška pri slanju.';
+          var msg = (json.errors && json.errors[0] && json.errors[0].message) || 'Fehler beim Senden.';
           throw new Error(msg);
         }
       })
       .catch(function (err) {
         btnSubmit.disabled    = false;
         spinner.style.display = 'none';
-        submitTxt.textContent = 'Pošalji Upit';
-        alert(err.message || 'Greška pri slanju. Pokušaj ponovo.');
+        submitTxt.textContent = 'Anfrage senden';
+        alert(err.message || 'Fehler beim Senden. Bitte erneut versuchen.');
       });
     });
   }

@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+
+    <!-- Per-bar gradient: cyan top → purple bottom -->
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+
+    <style>
+      .bar {
+        fill: url(#g);
+        transform-box: fill-box;
+        transform-origin: 50% 50%;
+      }
+
+      /* Each bar gets unique keyframes for organic, non-mechanical feel */
+      @keyframes b1 {
+        0%   { transform: scaleY(0.42); }
+        40%  { transform: scaleY(1.38); }
+        70%  { transform: scaleY(0.55); }
+        100% { transform: scaleY(0.42); }
+      }
+      @keyframes b2 {
+        0%   { transform: scaleY(0.52); }
+        35%  { transform: scaleY(1.28); }
+        65%  { transform: scaleY(0.6);  }
+        100% { transform: scaleY(0.52); }
+      }
+      @keyframes b3 {
+        0%   { transform: scaleY(0.62); }
+        45%  { transform: scaleY(1.22); }
+        75%  { transform: scaleY(0.68); }
+        100% { transform: scaleY(0.62); }
+      }
+      @keyframes b4 {
+        0%   { transform: scaleY(0.70); }
+        38%  { transform: scaleY(1.15); }
+        68%  { transform: scaleY(0.75); }
+        100% { transform: scaleY(0.70); }
+      }
+      @keyframes b5 {
+        0%   { transform: scaleY(0.78); }
+        50%  { transform: scaleY(1.08); }
+        100% { transform: scaleY(0.78); }
+      }
+      @keyframes b6 {
+        0%   { transform: scaleY(0.70); }
+        42%  { transform: scaleY(1.14); }
+        72%  { transform: scaleY(0.76); }
+        100% { transform: scaleY(0.70); }
+      }
+      @keyframes b7 {
+        0%   { transform: scaleY(0.62); }
+        36%  { transform: scaleY(1.24); }
+        66%  { transform: scaleY(0.66); }
+        100% { transform: scaleY(0.62); }
+      }
+      @keyframes b8 {
+        0%   { transform: scaleY(0.50); }
+        48%  { transform: scaleY(1.30); }
+        78%  { transform: scaleY(0.58); }
+        100% { transform: scaleY(0.50); }
+      }
+      @keyframes b9 {
+        0%   { transform: scaleY(0.42); }
+        44%  { transform: scaleY(1.36); }
+        74%  { transform: scaleY(0.52); }
+        100% { transform: scaleY(0.42); }
+      }
+
+      .bar-1 { animation: b1 1.20s ease-in-out infinite 0.00s; }
+      .bar-2 { animation: b2 1.50s ease-in-out infinite 0.15s; }
+      .bar-3 { animation: b3 1.00s ease-in-out infinite 0.30s; }
+      .bar-4 { animation: b4 1.35s ease-in-out infinite 0.10s; }
+      .bar-5 { animation: b5 0.90s ease-in-out infinite 0.25s; }
+      .bar-6 { animation: b6 1.40s ease-in-out infinite 0.05s; }
+      .bar-7 { animation: b7 1.10s ease-in-out infinite 0.20s; }
+      .bar-8 { animation: b8 1.60s ease-in-out infinite 0.35s; }
+      .bar-9 { animation: b9 1.30s ease-in-out infinite 0.40s; }
+    </style>
+  </defs>
+
+  <!--
+    9 bars, centers at x = 86 127 168 209 250 291 332 373 414
+    bar width = 28px, rx = 14 (full pill)
+    heights   =  70  110  176  216  250  216  176  110   70
+    all centered at cy = 250
+  -->
+
+  <!-- Bar 1 (leftmost / shortest) -->
+  <rect class="bar bar-1" x="72"  y="215" width="28" height="70"  rx="14"/>
+
+  <!-- Bar 2 -->
+  <rect class="bar bar-2" x="113" y="195" width="28" height="110" rx="14"/>
+
+  <!-- Bar 3 -->
+  <rect class="bar bar-3" x="154" y="162" width="28" height="176" rx="14"/>
+
+  <!-- Bar 4 -->
+  <rect class="bar bar-4" x="195" y="142" width="28" height="216" rx="14"/>
+
+  <!-- Bar 5 (center / tallest) -->
+  <rect class="bar bar-5" x="236" y="125" width="28" height="250" rx="14"/>
+
+  <!-- Bar 6 -->
+  <rect class="bar bar-6" x="277" y="142" width="28" height="216" rx="14"/>
+
+  <!-- Bar 7 -->
+  <rect class="bar bar-7" x="318" y="162" width="28" height="176" rx="14"/>
+
+  <!-- Bar 8 -->
+  <rect class="bar bar-8" x="359" y="195" width="28" height="110" rx="14"/>
+
+  <!-- Bar 9 (rightmost / shortest) -->
+  <rect class="bar bar-9" x="400" y="215" width="28" height="70"  rx="14"/>
+
+</svg>
